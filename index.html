@@ -9,9 +9,12 @@
   </head>
   <body>
 
-    <input type="color"  value="#ff0000" />
-    <output
-    
+    <form oninput="result.value=hex.value">
+        <input class="input-hex" type="text"></input>
+        <input type="color" name="hex" value="#ffffff" />
+        <output name="result">#ffffff</output>
+    </form>
+
     <script src="js/script.js"></script>
   </body>
 </html>

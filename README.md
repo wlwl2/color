@@ -1,12 +1,3 @@
-# simple-web-template
+color-picker
 
-A simple template that can be used to create websites.
-
-___
-###Consists of 3 important files:
-
-* **index.html**
-
-* **style.css**
-
-* **script.js**
+http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
