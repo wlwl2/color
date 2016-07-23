@@ -2,13 +2,43 @@ body {
   font-family: sans-serif;
 }
 
+.color-picker-container {
+  display: flex;
+  flex-wrap: row wrap;
+}
+
 .input-color {
   font-size: 2em;
-  display: inline-block;
+  display: flex;
 }
 
 .color-picker {
-  display: inline-block;
+  display: flex;
   height: 3em;
   width: 5em;
+}
+
+.back-to-home-link {
+  padding: 3em 0;
+}
+
+button {
+  border-radius: .5em;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+	text-decoration: none;
+	font-size: 1.6em;
+  padding: 1em;
+
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus  {
+	color: black;
 }
