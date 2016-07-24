@@ -19,7 +19,7 @@ body {
 }
 
 .back-to-home-link {
-  padding: 3em 0;
+  padding: 1em 0;
 }
 
 .back-to-home-link button {
@@ -45,8 +45,10 @@ a:focus  {
 
 .hex {
   padding: 1em 0;
+  font-size: 2em;
 }
 
 .rgb {
   padding: 1em 0;
+  font-size: 2em;
 }
