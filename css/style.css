@@ -22,12 +22,12 @@ body {
   padding: 3em 0;
 }
 
-button {
+.back-to-home-link button {
   border-radius: .5em;
   padding: 0;
 }
 
-a {
+.back-to-home-link a {
   display: inline-block;
 	text-decoration: none;
 	font-size: 1.6em;
@@ -35,10 +35,19 @@ a {
 
 }
 
-a:link,
+.back-to-home-link a:link,
 a:visited,
 a:hover,
 a:active,
 a:focus  {
 	color: black;
+}
+
+.hex {
+  padding: 1em 0;
+  background-color: rgb(111,50,121);
+}
+
+.rgb {
+  padding: 1em 0;
 }
