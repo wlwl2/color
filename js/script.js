@@ -35,6 +35,7 @@ function hexToRgb(hex) {
 }
 
 inputColor.addEventListener("change", function() {
+  inputColor.value = inputColor.value.trim();
   // if 3 digit hex entered, make into 6 digit hex
   if (inputColor.value.search(/^#...$/) !== -1) {
     var firstCharacter = inputColor.value.charAt(1);
@@ -43,7 +44,6 @@ inputColor.addEventListener("change", function() {
     inputColor.value = "#" + firstCharacter + firstCharacter + secondCharacter +
     secondCharacter + thirdCharacter + thirdCharacter;
   }
-
   // format example: rgb(111, 50, 121)
   if (inputColor.value.search(/[r][g][b][(]/) !== -1 &&
       inputColor.value.match(/\d,/g).length === 2 &&
@@ -58,7 +58,12 @@ inputColor.addEventListener("change", function() {
     inputColor.value = rgbToHex(red, green, blue);
     hexOutput.innerHTML = rgbToHex(red, green, blue);
   }
+
   colorPicker.value = inputColor.value;
+  hexOutput.innerHTML = inputColor.value;
+  rgbOutput.innerHTML = "rgb("+ hexToRgb(inputColor.value).r.toString() + ", " +
+  hexToRgb(inputColor.value).g.toString() + ", " +
+  hexToRgb(inputColor.value).b.toString() + ")";
 });
 
 colorPicker.addEventListener("change", function(){
