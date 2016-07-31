@@ -66,9 +66,8 @@ inputColor.addEventListener("change", function() {
     var red = Number(rgbList[0]);
     var green = Number(rgbList[1]);
     var blue = Number(rgbList[2]);
-    inputColor.value = rgbToHex(red, green, blue);
     hexOutput.innerHTML = rgbToHex(red, green, blue);
-    colorPicker.value = inputColor.value;
+    colorPicker.value = hexOutput.innerHTML;
   }
 
   // 6 digit hex
