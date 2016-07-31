@@ -35,20 +35,31 @@ function hexToRgb(hex) {
 }
 
 inputColor.addEventListener("change", function() {
+
+  // Removes whitespaces from the left and right side of the input value.
   inputColor.value = inputColor.value.trim();
-  // if 3 digit hex entered, make into 6 digit hex
-  if (inputColor.value.search(/^#...$/) !== -1) {
+
+  // If 3 digit hex entered, make into 6 digit hex
+  if (inputColor.value.search(/^#[0-9A-Fa-f]{3}$/) !== -1) {
     var firstCharacter = inputColor.value.charAt(1);
     var secondCharacter = inputColor.value.charAt(2);
     var thirdCharacter = inputColor.value.charAt(3);
     inputColor.value = "#" + firstCharacter + firstCharacter + secondCharacter +
     secondCharacter + thirdCharacter + thirdCharacter;
+    colorPicker.value = inputColor.value;
+    hexOutput.innerHTML = inputColor.value;
+    rgbOutput.innerHTML = "rgb("+ hexToRgb(inputColor.value).r.toString() + ", " +
+    hexToRgb(inputColor.value).g.toString() + ", " +
+    hexToRgb(inputColor.value).b.toString() + ")";
   }
-  // format example: rgb(111, 50, 121)
-  if (inputColor.value.search(/[r][g][b][(]/) !== -1 &&
-      inputColor.value.match(/\d,/g).length === 2 &&
-      inputColor.value.search(/[)]/) !== -1)
-  {
+
+  // Format example: rgb(111, 50, 121)
+  else if ((inputColor.value.search(/[r][g][b][(]/) !== -1 &&
+           inputColor.value.match(/\d,/g).length === 2 &&
+           inputColor.value.search(/[)]/) !== -1) ||
+           (inputColor.value.search(/[r][g][b]\s[(]/) !== -1 &&
+           inputColor.value.match(/\d,/g).length === 2 &&
+           inputColor.value.search(/[)]/) !== -1)) {
     rgbOutput.innerHTML = inputColor.value;
     var regExp = /\(([^)]+)\)/;
     var rgbList = regExp.exec(inputColor.value)[1].split(",");
@@ -57,17 +68,39 @@ inputColor.addEventListener("change", function() {
     var blue = Number(rgbList[2]);
     inputColor.value = rgbToHex(red, green, blue);
     hexOutput.innerHTML = rgbToHex(red, green, blue);
+    colorPicker.value = inputColor.value;
   }
 
-  colorPicker.value = inputColor.value;
-  hexOutput.innerHTML = inputColor.value;
-  rgbOutput.innerHTML = "rgb("+ hexToRgb(inputColor.value).r.toString() + ", " +
-  hexToRgb(inputColor.value).g.toString() + ", " +
-  hexToRgb(inputColor.value).b.toString() + ")";
+  // 6 digit hex
+  else if (inputColor.value.search(/^#[0-9A-Fa-f]{6}$/) !== -1) {
+    colorPicker.value = inputColor.value;
+    hexOutput.innerHTML = inputColor.value;
+    rgbOutput.innerHTML = "rgb("+ hexToRgb(inputColor.value).r.toString() + ", " +
+    hexToRgb(inputColor.value).g.toString() + ", " +
+    hexToRgb(inputColor.value).b.toString() + ")";
+  }
+
+  // 6 digit hex WITH NO hash
+  else if (inputColor.value.search(/[0-9A-Fa-f]{6}/) !== -1) {
+    inputColor.value = '#' + inputColor.value;
+    colorPicker.value = inputColor.value;
+    hexOutput.innerHTML = inputColor.value;
+    rgbOutput.innerHTML = "rgb("+ hexToRgb(inputColor.value).r.toString() + ", " +
+    hexToRgb(inputColor.value).g.toString() + ", " +
+    hexToRgb(inputColor.value).b.toString() + ")";
+  }
+
+  // Not accepted formats:
+  else {
+    hexOutput.innerHTML = "Please enter a valid color in hex or rgb format!";
+    rgbOutput.innerHTML = "Please enter a valid color in hex or rgb format!";
+  }
+  hexOutput.innerHTML = hexOutput.innerHTML.trim();
+  rgbOutput.innerHTML = rgbOutput.innerHTML.trim();
+
 });
 
 colorPicker.addEventListener("change", function(){
-  colorPicker.value = colorPicker.value;
   inputColor.value = colorPicker.value;
   hexOutput.innerHTML = inputColor.value;
   rgbOutput.innerHTML = "rgb("+ hexToRgb(inputColor.value).r.toString() + ", " +
