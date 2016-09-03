@@ -1,5 +1,4 @@
 (function colorPickerPage(){
-
   var inputColor = document.querySelector(".input-color");
   var colorPicker = document.querySelector(".color-picker");
   var hexOutput = document.querySelector(".hex-output");
