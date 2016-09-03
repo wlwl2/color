@@ -5,7 +5,8 @@
   var rgbOutput = document.querySelector(".rgb-output");
   var secondHalfOfPage = document.querySelector('.second-half');
 
-  secondHalfOfPage.style = 'background-color:' + colorPicker.value + ';';
+  secondHalfOfPage.setAttribute('style', 'background-color:'+ colorPicker.value + ';');
+
   inputColor.value = colorPicker.value;
 
   //RGB to hex conversion and add any required zero padding
@@ -132,7 +133,7 @@
     hexOutput.innerHTML = hexOutput.innerHTML.trim();
     rgbOutput.innerHTML = rgbOutput.innerHTML.trim();
 
-    secondHalfOfPage.style = 'background-color:' + colorPicker.value + ';';
+    secondHalfOfPage.setAttribute('style', 'background-color:'+ colorPicker.value + ';');
 
   });
 
@@ -143,7 +144,7 @@
     rgbOutput.innerHTML = "rgb("+ hexToRgb(inputColor.value).r.toString() + ", " +
     hexToRgb(inputColor.value).g.toString() + ", " +
     hexToRgb(inputColor.value).b.toString() + ")";
-    secondHalfOfPage.style = 'background-color:' + colorPicker.value + ';';
+    secondHalfOfPage.setAttribute('style', 'background-color:'+ colorPicker.value + ';');
   });
 
 
