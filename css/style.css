@@ -1,3 +1,27 @@
+.red {
+  background-color: #b91b1b;
+}
+
+.green {
+  background-color: #1e6712;
+}
+
+.blue {
+  background-color: #31348a;
+}
+
+.yellow {
+  background-color: #cfc32c;
+}
+
+.purple {
+  background-color: #7a35bf;
+}
+
+.orange {
+  background-color: #e8af4d;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
@@ -26,9 +50,28 @@ body {
   flex-wrap: row wrap;
 }
 
-.input-color {
+.color-picker-container input {
+  border-radius: 3px;
+}
+
+.color-input-container button {
+  margin-top: 10px;
+  border-radius: 3px;
+  width: 30px;
+  height: 30px;
+}
+
+input.input-color {
   font-size: 2em;
   display: flex;
+}
+
+input:focus {
+  transform: scale(1.05);
+}
+
+button:focus {
+  transform: scale(1.1);
 }
 
 .color-picker {

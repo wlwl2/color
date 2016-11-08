@@ -147,6 +147,4 @@
     secondHalfOfPage.setAttribute('style', 'background-color:'+ colorPicker.value + ';');
   });
 
-
-
 })();
