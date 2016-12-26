@@ -1,27 +1,3 @@
-.red {
-  background-color: #b91b1b;
-}
-
-.green {
-  background-color: #1e6712;
-}
-
-.blue {
-  background-color: #31348a;
-}
-
-.yellow {
-  background-color: #cfc32c;
-}
-
-.purple {
-  background-color: #7a35bf;
-}
-
-.orange {
-  background-color: #e8af4d;
-}
-
 body {
   font-family: sans-serif;
   margin: 0;
@@ -54,24 +30,31 @@ body {
   border-radius: 3px;
 }
 
-.color-input-container button {
-  margin-top: 10px;
+.color-palette {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+
+.color-palette button {
   border-radius: 3px;
   width: 30px;
   height: 30px;
 }
 
-input.input-color {
-  font-size: 2em;
+.color-palette {
   display: flex;
 }
 
-input:focus {
-  transform: scale(1.05);
+.color-palette a {
+  display: inline-block;
+  text-decoration: none;
 }
 
-button:focus {
-  transform: scale(1.1);
+input.input-color {
+  font-size: 2em;
+  display: flex;
 }
 
 .color-picker {
@@ -115,5 +98,5 @@ a:focus  {
 }
 
 @media screen and (max-width: 1023px) {
-  
+
 }
