@@ -6,8 +6,9 @@
   background-color: #1e6712;
 }
 
+/* Blue background on white text */
 .blue {
-  background-color: #31348a;
+  background-color: rgb(10, 36, 80);
 }
 
 .yellow {
