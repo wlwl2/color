@@ -3,6 +3,13 @@ body {
   margin: 0;
 }
 
+.color-picker-component {
+  border: solid thin black;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px;
+}
+
 .color-picker-container {
   display: flex;
   flex-flow: row wrap;
@@ -76,15 +83,15 @@ input.input-color {
 }
 
 .back-to-home-link {
-  padding: 1em 0;
+  padding: 1em;
 }
 
 .back-to-home-link button {
   display: inline-block;
 	text-decoration: none;
-	font-size: 1.6em;
-  padding: 1em;
-  border-radius: .5em;
+	font-size: 1.2em;
+  padding: .5em;
+  border-radius: .1em;
 }
 
 .back-to-home-link a {
@@ -109,7 +116,9 @@ a:focus  {
   font-size: 2em;
 }
 
-
+.attribution {
+  margin: 1em;
+}
 
 @media screen and (max-width: 1023px) {
 
