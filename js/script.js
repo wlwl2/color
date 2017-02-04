@@ -1,9 +1,11 @@
-(function colorPickerFunction(){
+// Hex input will be the source of all truth for the color displayed.
+
+(function colorPickerFunction() {
   var inputColor = document.querySelectorAll(".input-color");
   var colorPicker = document.querySelectorAll(".color-picker");
   var hexOutput = document.querySelectorAll(".hex-output");
   var rgbOutput = document.querySelectorAll(".rgb-output");
-  var secondHalfOfPage = document.querySelectorAll('.second-half');
+  var previewHalf = document.querySelectorAll('.second-half');
 
   //RGB to hex conversion and add any required zero padding
   function rgbToHex(r, g, b) {
@@ -20,6 +22,7 @@
 
   // Here's a version of hexToRgb() that also parses a shorthand hex triplet such as "#03F"
   function hexToRgb(hex) {
+
     // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
     var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
     hex = hex.replace(shorthandRegex, function(m, r, g, b) {
@@ -37,7 +40,7 @@
   for( var i = 0; i < inputColor.length; i++ ){
     (function(i){
 
-      secondHalfOfPage[i].setAttribute('style', 'background-color:'+ colorPicker[i].value + ';');
+      previewHalf[i].style.backgroundColor = colorPicker[i].value;
 
       inputColor[i].value = colorPicker[i].value;
 
@@ -136,7 +139,7 @@
         hexOutput[i].innerHTML = hexOutput[i].innerHTML.trim();
         rgbOutput[i].innerHTML = rgbOutput[i].innerHTML.trim();
 
-        secondHalfOfPage[i].setAttribute('style', 'background-color:'+ colorPicker[i].value + ';');
+        previewHalf[i].style.backgroundColor = colorPicker[i].value;
 
       });
 
@@ -147,7 +150,7 @@
         rgbOutput[i].innerHTML = "rgb("+ hexToRgb(inputColor[i].value).r.toString() + ", " +
         hexToRgb(inputColor[i].value).g.toString() + ", " +
         hexToRgb(inputColor[i].value).b.toString() + ")";
-        secondHalfOfPage[i].setAttribute('style', 'background-color:'+ colorPicker[i].value + ';');
+        previewHalf[i].style.backgroundColor = colorPicker[i].value;
       });
 
     })(i);
