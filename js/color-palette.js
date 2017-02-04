@@ -63,10 +63,10 @@ var colorList = [
 ]
 
 var colorPalette = document.querySelectorAll(".color-palette__buttons");
-var previewHalf = document.querySelectorAll(".second-half");
 var inputColor = document.querySelectorAll(".input-color");
 var hexOutput = document.querySelectorAll(".hex-output");
 var rgbOutput = document.querySelectorAll(".rgb-output");
+var previewHalf = document.querySelectorAll(".second-half");
 
 // For each palette.
 for (var i = 0; i < colorPalette.length; i++) {
@@ -78,6 +78,7 @@ for (var i = 0; i < colorPalette.length; i++) {
     (function(i,j){
       colorPalette[i].children[j].addEventListener("click", function(){
         var paletteButtonColor = rgbFullToHex(colorPalette[i].children[j].style.backgroundColor);
+        inputColor[i].value = paletteButtonColor;
         hexOutput[i].innerHTML = paletteButtonColor;
         rgbOutput[i].innerHTML = "rgb("+ hexToRgb(paletteButtonColor).r.toString() + ", " +
         hexToRgb(paletteButtonColor).g.toString() + ", " +
