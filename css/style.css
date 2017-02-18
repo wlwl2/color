@@ -3,6 +3,10 @@ body {
   margin: 0;
 }
 
+.color-picker-component.hidden {
+  display: none;
+}
+
 .color-picker-component {
   display: flex;
   flex-flow: row wrap;
@@ -62,10 +66,6 @@ body {
   border-radius: 3px;
   width: 30px;
   height: 30px;
-}
-
-.color-palette {
-  display: flex;
 }
 
 .color-palette a {
@@ -130,5 +130,139 @@ footer a {
 }
 
 @media screen and (max-width: 1023px) {
+
+  body {
+    font-family: sans-serif;
+    margin: 0;
+  }
+
+  .color-picker-component.hidden {
+    display: none;
+  }
+
+  .color-picker-component {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .color-picker-container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .first-half {
+    display: block;
+    flex-flow: column wrap;
+    flex: 1 0 50%;
+    border: solid thin black;
+    box-sizing: border-box;
+    border-bottom: 0;
+    width: 100%;
+  }
+
+  .second-half {
+    display: flex;
+    flex: 1 0 50%;
+    flex-flow: column wrap;
+  }
+
+  .second-half .top {
+    display: flex;
+    width: 100%;
+    height: 50%;
+  }
+
+  .second-half .bottom {
+    display: flex;
+    width: 100%;
+    height: 50%;
+  }
+
+  .color-picker-container {
+    display: block;
+    flex-wrap: row wrap;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .color-picker-container input {
+    border-radius: 3px;
+  }
+
+  .color-palette {
+    display: block;
+    flex-flow: wrap;
+    align-items: baseline;
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  .color-palette button {
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .color-palette a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  input.input-color {
+    font-size: 2em;
+    display: flex;
+    width: 100%;
+  }
+
+  .color-picker {
+    display: flex;
+    height: 3em;
+    width: 5em;
+  }
+
+  .hex {
+    font-size: 2em;
+    padding: 20px;
+  }
+
+  .rgb {
+    font-size: 2em;
+    padding: 20px;
+  }
+
+  .color-picker-main-container {
+    margin-bottom: 80px;
+  }
+
+  footer{
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+    background-color: #002b36;
+    width: 100%;
+    font-size: 0;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .footer-navigation {
+    display: block;
+    font-size: 16px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .attribution {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
+    color: #fdf6e3;
+    padding: 0;
+  }
+
+  footer a {
+    color: #fdf6e3;
+  }
 
 }
