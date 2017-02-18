@@ -7,8 +7,20 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/palette-button-colors.css">
     <link rel="icon" type="image/png" href="">
-    <script src="js/color-input-detection.js"></script>
 
+    <noscript>
+      <style type="text/css">
+        .color-picker-main-container {
+          display:none;
+        }
+      </style>
+      <div class="noscriptmsg">
+        Javascript is blocked and not enabled.
+        Even if you did enable it, this color picker probably won't work.
+        Use the latest version of Google Chrome, Firefox,
+        or try another browser.
+      </div>
+    </noscript>
   </head>
   <body>
 
@@ -156,6 +168,8 @@
     </footer>
 
 
+
+    <script src="js/color-input-detection.js"></script>
     <script src="js/script.js"></script>
     <script src="js/color-palette.js"></script>
   </body>
