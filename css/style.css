@@ -84,30 +84,6 @@ input.input-color {
   width: 5em;
 }
 
-.back-to-home-link {
-  padding: 1em;
-}
-
-.back-to-home-link button {
-  display: inline-block;
-	text-decoration: none;
-	font-size: 1.2em;
-  padding: .5em;
-  border-radius: .1em;
-}
-
-.back-to-home-link a {
-  padding: 0;
-}
-
-.back-to-home-link a:link,
-a:visited,
-a:hover,
-a:active,
-a:focus  {
-	color: black;
-}
-
 .hex {
   font-size: 2em;
   padding: 20px;
@@ -118,8 +94,39 @@ a:focus  {
   padding: 20px;
 }
 
+.color-picker-main-container {
+  margin-bottom: 80px;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  height: 80px;
+  background-color: #002b36;
+  width: 100%;
+  font-size: 0;
+}
+
+.footer-navigation {
+  display: inline-block;
+  font-size: 16px;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
 .attribution {
-  margin: 1em;
+  display: inline-block;
+  width: 50%;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: right;
+  color: #fdf6e3;
+}
+
+footer a {
+  color: #fdf6e3;
 }
 
 @media screen and (max-width: 1023px) {
