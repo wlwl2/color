@@ -114,6 +114,7 @@ for (var i = 0; i < colorPalette.length; i++) {
   // For each of the buttons in each palette.
   for (var j = 0; j < colorPalette[i].children.length; j++) {
     colorPalette[i].children[j].style.backgroundColor = colorList[j].backgroundColor;
+    colorPalette[i].children[j].setAttribute("title", colorList[j].colorName);
 
     (function(i,j){
       colorPalette[i].children[j].addEventListener("click", function(){
