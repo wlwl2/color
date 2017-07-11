@@ -39,7 +39,8 @@ body {
       border-radius: 3px; }
     .first-half .color-picker-container .input-color-container {
       border: 1px solid black;
-      border-radius: 3px; }
+      border-radius: 3px;
+      padding: 1px; }
     .first-half .color-picker-container .input-color {
       display: inline-block;
       font-size: 22px;
