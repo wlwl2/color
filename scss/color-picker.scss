@@ -36,9 +36,7 @@
 
     .input-color-container {
       border: 1px solid black;
-      padding: 4px;
       border-radius: 3px;
-      margin: 0 0 10px 0;
     }
 
     .input-color {
@@ -88,6 +86,10 @@
 
     .color-picker-container {
       margin: 0;
+
+      .input-color-container {
+        margin: 0 0 10px 0;
+      }
 
       .input-color {
         display: inline-block;

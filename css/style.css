@@ -39,9 +39,7 @@ body {
       border-radius: 3px; }
     .first-half .color-picker-container .input-color-container {
       border: 1px solid black;
-      padding: 4px;
-      border-radius: 3px;
-      margin: 0 0 10px 0; }
+      border-radius: 3px; }
     .first-half .color-picker-container .input-color {
       display: inline-block;
       font-size: 22px;
@@ -73,6 +71,8 @@ body {
     width: auto; }
     .first-half .color-picker-container {
       margin: 0; }
+      .first-half .color-picker-container .input-color-container {
+        margin: 0 0 10px 0; }
       .first-half .color-picker-container .input-color {
         display: inline-block;
         width: 100%; }
