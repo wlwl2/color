@@ -24,7 +24,6 @@ function hexToRgb (hex) {
   hex = hex.replace(shorthandRegex, function (m, r, g, b) {
     return r + r + g + g + b + b
   })
-
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
   return result ? {
     r: parseInt(result[1], 16),
@@ -100,28 +99,112 @@ var colorList = [
   }
 ]
 
-var colorPalette = document.querySelectorAll('.color-palette__buttons')
-var inputColor = document.querySelectorAll('.input-color')
-var hexOutput = document.querySelectorAll('.hex-output')
-var rgbOutput = document.querySelectorAll('.rgb-output')
-var previewHalf = document.querySelectorAll('.second-half')
-
-// For each palette.
-for (var i = 0; i < colorPalette.length; i++) {
-  // For each of the buttons in each palette.
-  for (var j = 0; j < colorPalette[i].children.length; j++) {
-    colorPalette[i].children[j].style.backgroundColor = colorList[j].backgroundColor;
-    colorPalette[i].children[j].setAttribute('title', colorList[j].colorName);
-    (function (i, j) {
-      colorPalette[i].children[j].addEventListener('click', function () {
-        var paletteButtonColor = rgbFullToHex(colorPalette[i].children[j].style.backgroundColor)
-        inputColor[i].value = paletteButtonColor
-        hexOutput[i].innerHTML = paletteButtonColor
-        rgbOutput[i].innerHTML = 'rgb(' + hexToRgb(paletteButtonColor).r.toString() + ', ' +
-        hexToRgb(paletteButtonColor).g.toString() + ', ' +
-        hexToRgb(paletteButtonColor).b.toString() + ')'
-        previewHalf[i].style.backgroundColor = paletteButtonColor
-      })
-    })(i, j);
+var chineseColorList = [
+  {
+    'colorName': 'White',
+    'backgroundColor': '#ffffff'
+  },
+  {
+    'colorName': 'Gamboge',
+    'backgroundColor': '#ffb61f'
+  },
+  {
+    'colorName': 'Vermilion',
+    'backgroundColor': '#f36838'
+  },
+  {
+    'colorName': 'Cinnabar',
+    'backgroundColor': '#f05654'
+  },
+  {
+    'colorName': 'Rouge',
+    'backgroundColor': '#660000'
+  },
+  {
+    'colorName': 'Carmine',
+    'backgroundColor': '#cb3a56'
+  },
+  {
+    'colorName': 'Scarlet',
+    'backgroundColor': '#ff2121'
+  },
+  {
+    'colorName': 'Umber',
+    'backgroundColor': '#9c5333'
+  },
+  {
+    'colorName': 'LightGreen',
+    'backgroundColor': '#7bcfa6'
+  },
+  {
+    'colorName': 'LightBlue',
+    'backgroundColor': '#1685a9'
+  },
+  {
+    'colorName': 'PhthalocyanineBlue',
+    'backgroundColor': '#000f89'
+  },
+  {
+    'colorName': 'Indigo',
+    'backgroundColor': '#003472'
   }
-}
+];
+
+(function solarizedPalette () {
+  var colorPalette = document.querySelectorAll('.color-palette__buttons')
+  var inputColor = document.querySelectorAll('.input-color')
+  var colorPicker = document.querySelectorAll('.color-picker')
+  var hexOutput = document.querySelectorAll('.hex-output')
+  var rgbOutput = document.querySelectorAll('.rgb-output')
+  var previewHalf = document.querySelectorAll('.second-half')
+
+  // For each palette.
+  for (var i = 0; i < colorPalette.length; i++) {
+    // For each of the buttons in each palette.
+    for (var j = 0; j < colorPalette[i].children.length; j++) {
+      colorPalette[i].children[j].style.backgroundColor = colorList[j].backgroundColor
+      colorPalette[i].children[j].setAttribute('title', colorList[j].colorName);
+      (function (i, j) {
+        colorPalette[i].children[j].addEventListener('click', function () {
+          var paletteButtonColor = rgbFullToHex(colorPalette[i].children[j].style.backgroundColor)
+          inputColor[i].value = paletteButtonColor
+          colorPicker[i].value = paletteButtonColor
+          hexOutput[i].innerHTML = paletteButtonColor
+          rgbOutput[i].innerHTML = 'rgb(' + hexToRgb(paletteButtonColor).r.toString() + ', ' +
+          hexToRgb(paletteButtonColor).g.toString() + ', ' +
+          hexToRgb(paletteButtonColor).b.toString() + ')'
+          previewHalf[i].style.backgroundColor = paletteButtonColor
+        })
+      })(i, j)
+    }
+  }
+})();
+(function chinesePalette () {
+  var colorPalette = document.querySelectorAll('.chinese .color-palette__buttons')
+  var inputColor = document.querySelectorAll('.chinese .input-color')
+  var colorPicker = document.querySelectorAll('.chinese .color-picker')
+  var hexOutput = document.querySelectorAll('.chinese .hex-output')
+  var rgbOutput = document.querySelectorAll('.chinese .rgb-output')
+  var previewHalf = document.querySelectorAll('.chinese .second-half')
+
+  // For each palette.
+  for (var i = 0; i < colorPalette.length; i++) {
+    // For each of the buttons in each palette.
+    for (var j = 0; j < colorPalette[i].children.length; j++) {
+      colorPalette[i].children[j].style.backgroundColor = chineseColorList[j].backgroundColor
+      colorPalette[i].children[j].setAttribute('title', chineseColorList[j].colorName);
+      (function (i, j) {
+        colorPalette[i].children[j].addEventListener('click', function () {
+          var paletteButtonColor = rgbFullToHex(colorPalette[i].children[j].style.backgroundColor)
+          inputColor[i].value = paletteButtonColor
+          colorPicker[i].value = paletteButtonColor
+          hexOutput[i].innerHTML = paletteButtonColor
+          rgbOutput[i].innerHTML = 'rgb(' + hexToRgb(paletteButtonColor).r.toString() + ', ' +
+          hexToRgb(paletteButtonColor).g.toString() + ', ' +
+          hexToRgb(paletteButtonColor).b.toString() + ')'
+          previewHalf[i].style.backgroundColor = paletteButtonColor
+        })
+      })(i, j)
+    }
+  }
+})();
