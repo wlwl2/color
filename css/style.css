@@ -11,25 +11,23 @@ body {
   margin-bottom: 80px; }
 
 .color-picker-component {
-  display: flex;
-  flex-flow: row wrap; }
+  display: table;
+  width: 100%; }
   .color-picker-component.hidden {
     display: none; }
 
 .first-half {
-  display: flex;
-  flex-flow: column wrap;
-  flex: 1 0 50%;
+  display: table-cell;
+  width: 50%;
   border: solid thin black;
   box-sizing: border-box;
   border-bottom: 0; }
   .first-half .color-picker {
-    display: flex;
+    display: block;
     height: 3em;
     width: 5em; }
   .first-half .color-picker-container {
-    display: flex;
-    flex-flow: row wrap;
+    display: block;
     padding: 20px 20px 0 20px; }
     .first-half .color-picker-container input {
       border-radius: 3px; }
@@ -44,9 +42,8 @@ body {
     padding: 20px; }
 
 .second-half {
-  display: flex;
-  flex: 1 0 50%;
-  flex-flow: column wrap;
+  display: table-cell;
+  width: 50%;
   border: solid thin black;
   box-sizing: border-box;
   border-left: 0;
@@ -63,15 +60,12 @@ body {
 
   .first-half {
     display: block;
-    flex-flow: row nowrap;
-    flex: 0 1 auto;
     border: solid thin black;
     box-sizing: border-box;
     border-bottom: 0;
     width: 100%; }
     .first-half .color-picker-container {
       display: block;
-      flex-flow: row nowrap;
       margin: 0;
       padding: 20px; }
       .first-half .color-picker-container .input-color {
@@ -89,13 +83,9 @@ body {
 
   .second-half {
     display: block;
-    flex: 0 1 auto;
-    flex-flow: row nowrap;
     width: 100%; } }
 .color-palette {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: flex-start;
+  display: block;
   margin: 10px 0;
   padding: 0 20px; }
 
@@ -107,8 +97,6 @@ body {
 @media screen and (max-width: 1023px) {
   .color-palette {
     display: block;
-    flex-flow: row nowrap;
-    align-items: baseline;
     margin: 0;
     padding: 0 20px; }
 

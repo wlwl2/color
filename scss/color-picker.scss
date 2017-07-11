@@ -3,8 +3,8 @@
 }
 
 .color-picker-component {
-  display: flex;
-  flex-flow: row wrap;
+  display: table;
+  width: 100%;
 
   &.hidden {
     display: none;
@@ -12,23 +12,21 @@
 }
 
 .first-half {
-  display: flex;
-  flex-flow: column wrap;
-  flex: 1 0 50%;
+  display: table-cell;
+  width: 50%;
   border: solid thin black;
   box-sizing: border-box;
   border-bottom: 0;
 
 
   .color-picker {
-    display: flex;
+    display: block;
     height: 3em;
     width: 5em;
   }
 
   .color-picker-container {
-    display: flex;
-    flex-flow: row wrap;
+    display: block;
     padding: 20px 20px 0 20px;
 
     input {
@@ -53,9 +51,8 @@
 }
 
 .second-half {
-  display: flex;
-  flex: 1 0 50%;
-  flex-flow: column wrap;
+  display: table-cell;
+  width: 50%;
   border: solid thin black;
   box-sizing: border-box;
   border-left: 0;
@@ -79,8 +76,6 @@
 
   .first-half {
     display: block;
-    flex-flow: row nowrap;
-    flex: 0 1 auto;
     border: solid thin black;
     box-sizing: border-box;
     border-bottom: 0;
@@ -88,7 +83,6 @@
 
     .color-picker-container {
       display: block;
-      flex-flow: row nowrap;
       margin: 0;
       padding: 20px;
 
@@ -116,8 +110,6 @@
 
   .second-half {
     display: block;
-    flex: 0 1 auto;
-    flex-flow: row nowrap;
     width: 100%;
   }
 }
