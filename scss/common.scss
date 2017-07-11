@@ -3,52 +3,6 @@ body {
   margin: 0;
 }
 
-.first-half {
-  display: flex;
-  flex-flow: column wrap;
-  flex: 1 0 50%;
-  border: solid thin black;
-  box-sizing: border-box;
-  border-bottom: 0;
-}
-
-.second-half {
-  display: flex;
-  flex: 1 0 50%;
-  flex-flow: column wrap;
-  border: solid thin black;
-  box-sizing: border-box;
-  border-left: 0;
-  border-bottom: 0;
-
-  p {
-    margin: 1em;
-  }
-}
-
-
-
 @media screen and (max-width: 1023px) {
 
-  body {
-    font-family: sans-serif;
-    margin: 0;
-  }
-
-  .first-half {
-    display: block;
-    flex-flow: row nowrap;
-    flex: 0 1 auto;
-    border: solid thin black;
-    box-sizing: border-box;
-    border-bottom: 0;
-    width: 100%;
-  }
-
-  .second-half {
-    display: block;
-    flex: 0 1 auto;
-    flex-flow: row nowrap;
-    width: 100%;
-  }
 }

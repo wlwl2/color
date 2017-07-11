@@ -7,6 +7,15 @@ body {
   font-family: sans-serif;
   margin: 0; }
 
+.color-picker-main-container {
+  margin-bottom: 80px; }
+
+.color-picker-component {
+  display: flex;
+  flex-flow: row wrap; }
+  .color-picker-component.hidden {
+    display: none; }
+
 .first-half {
   display: flex;
   flex-flow: column wrap;
@@ -14,6 +23,25 @@ body {
   border: solid thin black;
   box-sizing: border-box;
   border-bottom: 0; }
+  .first-half .color-picker {
+    display: flex;
+    height: 3em;
+    width: 5em; }
+  .first-half .color-picker-container {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px 20px 0 20px; }
+    .first-half .color-picker-container input {
+      border-radius: 3px; }
+    .first-half .color-picker-container .input-color {
+      font-size: 2em;
+      display: flex; }
+  .first-half .hex {
+    font-size: 2em;
+    padding: 20px; }
+  .first-half .rgb {
+    font-size: 2em;
+    padding: 20px; }
 
 .second-half {
   display: flex;
@@ -27,9 +55,11 @@ body {
     margin: 1em; }
 
 @media screen and (max-width: 1023px) {
-  body {
-    font-family: sans-serif;
-    margin: 0; }
+  .color-picker-main-container {
+    margin-bottom: 80px; }
+    .color-picker-main-container .color-picker-component {
+      display: table;
+      flex-flow: row nowrap; }
 
   .first-half {
     display: block;
@@ -39,76 +69,29 @@ body {
     box-sizing: border-box;
     border-bottom: 0;
     width: 100%; }
+    .first-half .color-picker-container {
+      display: block;
+      flex-flow: row nowrap;
+      margin: 0;
+      padding: 20px; }
+      .first-half .color-picker-container .input-color {
+        display: block; }
+    .first-half .hex {
+      font-size: 2em;
+      padding: 20px; }
+    .first-half .rgb {
+      font-size: 2em;
+      padding: 20px; }
+    .first-half .color-picker {
+      display: block;
+      height: 3em;
+      width: 5em; }
 
   .second-half {
     display: block;
     flex: 0 1 auto;
     flex-flow: row nowrap;
     width: 100%; } }
-.color-picker {
-  display: flex;
-  height: 3em;
-  width: 5em; }
-
-.color-picker-main-container {
-  margin-bottom: 80px; }
-
-.color-picker-component {
-  display: flex;
-  flex-flow: row wrap; }
-
-.color-picker-component.hidden {
-  display: none; }
-
-.color-picker-container {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 20px 20px 0 20px; }
-  .color-picker-container input {
-    border-radius: 3px; }
-  .color-picker-container .input-color {
-    font-size: 2em;
-    display: flex; }
-
-.hex {
-  font-size: 2em;
-  padding: 20px; }
-
-.rgb {
-  font-size: 2em;
-  padding: 20px; }
-
-@media screen and (max-width: 1023px) {
-  .color-picker-component.hidden {
-    display: none; }
-
-  .color-picker-component {
-    display: flex;
-    flex-flow: row wrap; }
-
-  .color-picker-container {
-    display: block;
-    flex-wrap: row nowrap;
-    margin: 0;
-    padding: 20px; }
-    .color-picker-container .input-color {
-      display: block; }
-
-  .hex {
-    font-size: 2em;
-    padding: 20px; }
-
-  .rgb {
-    font-size: 2em;
-    padding: 20px; }
-
-  .color-picker {
-    display: flex;
-    height: 3em;
-    width: 5em; }
-
-  .color-picker-main-container {
-    margin-bottom: 80px; } }
 .color-palette {
   display: flex;
   flex-flow: column wrap;
@@ -121,14 +104,10 @@ body {
   width: 30px;
   height: 30px; }
 
-.color-palette a {
-  display: inline-block;
-  text-decoration: none; }
-
 @media screen and (max-width: 1023px) {
   .color-palette {
     display: block;
-    flex-flow: wrap;
+    flex-flow: row nowrap;
     align-items: baseline;
     margin: 0;
     padding: 0 20px; }
@@ -136,11 +115,7 @@ body {
   .color-palette button {
     border-radius: 3px;
     width: 30px;
-    height: 30px; }
-
-  .color-palette a {
-    display: inline-block;
-    text-decoration: none; } }
+    height: 30px; } }
 footer {
   position: fixed;
   bottom: 0;

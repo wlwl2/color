@@ -1,9 +1,3 @@
-.color-picker {
-  display: flex;
-  height: 3em;
-  width: 5em;
-}
-
 .color-picker-main-container {
   margin-bottom: 80px;
 }
@@ -11,56 +5,39 @@
 .color-picker-component {
   display: flex;
   flex-flow: row wrap;
-}
 
-.color-picker-component.hidden {
-  display: none;
-}
-
-.color-picker-container {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 20px 20px 0 20px;
-
-  input {
-    border-radius: 3px;
-  }
-
-  .input-color {
-    font-size: 2em;
-    display: flex;
-  }
-
-}
-.hex {
-  font-size: 2em;
-  padding: 20px;
-}
-
-.rgb {
-  font-size: 2em;
-  padding: 20px;
-}
-
-@media screen and (max-width: 1023px) {
-
-  .color-picker-component.hidden {
+  &.hidden {
     display: none;
   }
+}
 
-  .color-picker-component {
+.first-half {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1 0 50%;
+  border: solid thin black;
+  box-sizing: border-box;
+  border-bottom: 0;
+
+
+  .color-picker {
     display: flex;
-    flex-flow: row wrap;
+    height: 3em;
+    width: 5em;
   }
 
   .color-picker-container {
-    display: block;
-    flex-wrap: row nowrap;
-    margin: 0;
-    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px 20px 0 20px;
+
+    input {
+      border-radius: 3px;
+    }
 
     .input-color {
-      display: block;
+      font-size: 2em;
+      display: flex;
     }
 
   }
@@ -73,14 +50,74 @@
     font-size: 2em;
     padding: 20px;
   }
+}
 
-  .color-picker {
-    display: flex;
-    height: 3em;
-    width: 5em;
+.second-half {
+  display: flex;
+  flex: 1 0 50%;
+  flex-flow: column wrap;
+  border: solid thin black;
+  box-sizing: border-box;
+  border-left: 0;
+  border-bottom: 0;
+
+  p {
+    margin: 1em;
   }
+}
 
+
+@media screen and (max-width: 1023px) {
   .color-picker-main-container {
     margin-bottom: 80px;
+
+    .color-picker-component {
+      display: table;
+      flex-flow: row nowrap;
+    }
+  }
+
+  .first-half {
+    display: block;
+    flex-flow: row nowrap;
+    flex: 0 1 auto;
+    border: solid thin black;
+    box-sizing: border-box;
+    border-bottom: 0;
+    width: 100%;
+
+    .color-picker-container {
+      display: block;
+      flex-flow: row nowrap;
+      margin: 0;
+      padding: 20px;
+
+      .input-color {
+        display: block;
+      }
+
+    }
+    .hex {
+      font-size: 2em;
+      padding: 20px;
+    }
+
+    .rgb {
+      font-size: 2em;
+      padding: 20px;
+    }
+
+    .color-picker {
+      display: block;
+      height: 3em;
+      width: 5em;
+    }
+  }
+
+  .second-half {
+    display: block;
+    flex: 0 1 auto;
+    flex-flow: row nowrap;
+    width: 100%;
   }
 }
