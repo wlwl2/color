@@ -3,12 +3,17 @@
   src: url("../fonts/LatoLatin-Light.eot");
   /* IE9 Compat Modes */
   src: url("../fonts/LatoLatin-Light.woff2") format("woff2"), url("../fonts/LatoLatin-Light.woff") format("woff"), url("../fonts/LatoLatin-Light.eot") format("truetype"); }
+html {
+  width: 100%; }
+
 body {
   font-family: sans-serif;
-  margin: 0; }
+  margin: 0;
+  width: 100%; }
 
 .color-picker-main-container {
-  margin-bottom: 80px; }
+  margin-bottom: 80px;
+  width: 100%; }
 
 .color-picker-component {
   display: table;
@@ -27,19 +32,16 @@ body {
     height: 3em;
     width: 5em; }
   .first-half .color-picker-container {
-    display: block;
-    padding: 20px 20px 0 20px; }
+    display: block; }
     .first-half .color-picker-container input {
       border-radius: 3px; }
     .first-half .color-picker-container .input-color {
       font-size: 2em;
       display: flex; }
   .first-half .hex {
-    font-size: 2em;
-    padding: 20px; }
+    font-size: 2em; }
   .first-half .rgb {
-    font-size: 2em;
-    padding: 20px; }
+    font-size: 2em; }
 
 .second-half {
   display: table-cell;
@@ -55,50 +57,46 @@ body {
   .color-picker-main-container {
     margin-bottom: 80px; }
     .color-picker-main-container .color-picker-component {
-      display: table;
-      flex-flow: row nowrap; }
+      display: block;
+      width: auto; }
 
   .first-half {
     display: block;
     border: solid thin black;
     box-sizing: border-box;
     border-bottom: 0;
-    width: 100%; }
+    padding: 20px;
+    width: auto; }
     .first-half .color-picker-container {
-      display: block;
-      margin: 0;
-      padding: 20px; }
+      margin: 0; }
       .first-half .color-picker-container .input-color {
-        display: block; }
+        display: inline-block;
+        width: 100%; }
     .first-half .hex {
-      font-size: 2em;
-      padding: 20px; }
+      font-size: 2em; }
     .first-half .rgb {
-      font-size: 2em;
-      padding: 20px; }
+      font-size: 2em; }
     .first-half .color-picker {
-      display: block;
       height: 3em;
       width: 5em; }
 
   .second-half {
     display: block;
-    width: 100%; } }
+    width: auto; } }
 .color-palette {
   display: block;
-  margin: 10px 0;
-  padding: 0 20px; }
+  margin: 10px 0; }
 
 .color-palette button {
   border-radius: 3px;
   width: 30px;
-  height: 30px; }
+  height: 30px;
+  display: inline-block; }
 
 @media screen and (max-width: 1023px) {
   .color-palette {
     display: block;
-    margin: 0;
-    padding: 0 20px; }
+    margin: 0; }
 
   .color-palette button {
     border-radius: 3px;

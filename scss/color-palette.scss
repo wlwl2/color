@@ -1,18 +1,17 @@
 .color-palette {
   display: block;
   margin: 10px 0;
-  padding: 0 20px;
 }
 .color-palette button {
   border-radius: 3px;
   width: 30px;
   height: 30px;
+  display: inline-block;
 }
 @media screen and (max-width: 1023px) {
   .color-palette {
     display: block;
     margin: 0;
-    padding: 0 20px;
   }
   .color-palette button {
     border-radius: 3px;

@@ -1,5 +1,6 @@
 .color-picker-main-container {
   margin-bottom: 80px;
+  width: 100%;
 }
 
 .color-picker-component {
@@ -27,7 +28,6 @@
 
   .color-picker-container {
     display: block;
-    padding: 20px 20px 0 20px;
 
     input {
       border-radius: 3px;
@@ -41,12 +41,10 @@
   }
   .hex {
     font-size: 2em;
-    padding: 20px;
   }
 
   .rgb {
     font-size: 2em;
-    padding: 20px;
   }
 }
 
@@ -69,8 +67,8 @@
     margin-bottom: 80px;
 
     .color-picker-component {
-      display: table;
-      flex-flow: row nowrap;
+      display: block;
+      width: auto;
     }
   }
 
@@ -79,30 +77,27 @@
     border: solid thin black;
     box-sizing: border-box;
     border-bottom: 0;
-    width: 100%;
+    padding: 20px;
+    width: auto;
 
     .color-picker-container {
-      display: block;
       margin: 0;
-      padding: 20px;
 
       .input-color {
-        display: block;
+        display: inline-block;
+        width: 100%;
       }
 
     }
     .hex {
       font-size: 2em;
-      padding: 20px;
     }
 
     .rgb {
       font-size: 2em;
-      padding: 20px;
     }
 
     .color-picker {
-      display: block;
       height: 3em;
       width: 5em;
     }
@@ -110,6 +105,6 @@
 
   .second-half {
     display: block;
-    width: 100%;
+    width: auto;
   }
 }
