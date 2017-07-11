@@ -45,7 +45,9 @@ body {
       display: inline-block;
       font-size: 22px;
       font-family: sans-serif;
-      border: 0; }
+      border: 0;
+      margin: 0;
+      padding: 0; }
   .first-half .hex {
     margin: 10px 0; }
 
