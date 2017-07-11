@@ -40,14 +40,13 @@ body {
     .first-half .color-picker-container .input-color-container {
       border: 1px solid black;
       border-radius: 3px;
-      padding: 1px; }
+      padding: 1px 4px; }
     .first-half .color-picker-container .input-color {
       display: inline-block;
       font-size: 22px;
       font-family: sans-serif;
       width: 100%;
-      border: 0;
-      margin: 0 2px; }
+      border: 0; }
   .first-half .hex {
     margin: 10px 0; }
 
