@@ -1,0 +1,40 @@
+.color-palette {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  margin: 10px 0;
+  padding: 0 20px;
+}
+
+.color-palette button {
+  border-radius: 3px;
+  width: 30px;
+  height: 30px;
+}
+
+.color-palette a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1023px) {
+
+  .color-palette {
+    display: block;
+    flex-flow: wrap;
+    align-items: baseline;
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  .color-palette button {
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .color-palette a {
+    display: inline-block;
+    text-decoration: none;
+  }
+}

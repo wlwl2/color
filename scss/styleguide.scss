@@ -1,0 +1,25 @@
+// MARIE'S CHINESE COLOR.
+$White: #ffffff;
+$Gamboge: #ffb61f;
+$Vermilion: #f36838;
+$Cinnabar: #f05654;
+$Rouge: #660000;
+$Carmine: #cb3a56;
+$Scarlet: #ff2121;
+$Umber: #9c5333;
+$LightGreen: #7bcfa6;
+$LightBlue: #1685a9;
+$PhthalocyanineBlue: #000f89;
+$Indigo: #003472;
+
+@font-face {
+  font-family: 'LatoLatinLight';
+  src: url('../fonts/LatoLatin-Light.eot'); /* IE9 Compat Modes */
+  src: // url('../fonts/LatoLatin-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/LatoLatin-Light.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/LatoLatin-Light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/LatoLatin-Light.eot') format('truetype'), /* Safari, Android, iOS */
+       // url('../fonts/LatoLatin-Light.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+$LatoLatinLight: 'LatoLatinLight', sans-serif;

@@ -1,0 +1,91 @@
+.color-picker {
+  display: flex;
+  height: 3em;
+  width: 5em;
+}
+
+.hex {
+  font-size: 2em;
+  padding: 20px;
+}
+
+.rgb {
+  font-size: 2em;
+  padding: 20px;
+}
+
+.color-picker-main-container {
+  margin-bottom: 80px;
+}
+
+.color-picker-component {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.color-picker-component.hidden {
+  display: none;
+}
+
+.color-picker-container {
+  display: flex;
+  flex-flow: row wrap;
+
+  input {
+    border-radius: 3px;
+  }
+}
+
+.color-picker-container {
+  display: flex;
+  flex-wrap: row wrap;
+  padding: 20px 20px 0 20px;
+}
+
+@media screen and (max-width: 1023px) {
+
+  .color-picker-component.hidden {
+    display: none;
+  }
+
+  .color-picker-component {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .color-picker-container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .color-picker-container {
+    display: block;
+    flex-wrap: row wrap;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .color-picker-container input {
+    border-radius: 3px;
+  }
+
+  .color-picker {
+    display: flex;
+    height: 3em;
+    width: 5em;
+  }
+
+  .hex {
+    font-size: 2em;
+    padding: 20px;
+  }
+
+  .rgb {
+    font-size: 2em;
+    padding: 20px;
+  }
+
+  .color-picker-main-container {
+    margin-bottom: 80px;
+  }
+}
