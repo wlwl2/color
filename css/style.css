@@ -72,7 +72,7 @@ input.input-color {
 
   input.input-color {
     font-size: 2em;
-    display: flex;
+    display: block;
     width: 100%; } }
 .color-picker {
   display: flex;
