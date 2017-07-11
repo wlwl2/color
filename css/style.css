@@ -13,7 +13,8 @@ body {
 
 .color-picker-main-container {
   margin-bottom: 80px;
-  width: 100%; }
+  width: 100%;
+  font-size: 20px; }
 
 .color-picker-component {
   display: table;
@@ -24,34 +25,28 @@ body {
 .first-half {
   display: table-cell;
   width: 50%;
-  border: solid thin black;
+  border: solid 1px black;
   box-sizing: border-box;
-  border-bottom: 0; }
+  padding: 20px; }
   .first-half .color-picker {
     display: block;
-    height: 3em;
-    width: 5em; }
+    height: 30px;
+    width: 50px; }
   .first-half .color-picker-container {
     display: block; }
     .first-half .color-picker-container input {
       border-radius: 3px; }
     .first-half .color-picker-container .input-color {
-      font-size: 2em;
-      display: flex; }
-  .first-half .hex {
-    font-size: 2em; }
-  .first-half .rgb {
-    font-size: 2em; }
+      display: block;
+      font-size: 20px; }
 
 .second-half {
   display: table-cell;
   width: 50%;
-  border: solid thin black;
-  box-sizing: border-box;
-  border-left: 0;
-  border-bottom: 0; }
+  border: solid 1px black;
+  box-sizing: border-box; }
   .second-half p {
-    margin: 1em; }
+    margin: 20px; }
 
 @media screen and (max-width: 1023px) {
   .color-picker-main-container {
@@ -62,9 +57,6 @@ body {
 
   .first-half {
     display: block;
-    border: solid thin black;
-    box-sizing: border-box;
-    border-bottom: 0;
     padding: 20px;
     width: auto; }
     .first-half .color-picker-container {
@@ -72,13 +64,6 @@ body {
       .first-half .color-picker-container .input-color {
         display: inline-block;
         width: 100%; }
-    .first-half .hex {
-      font-size: 2em; }
-    .first-half .rgb {
-      font-size: 2em; }
-    .first-half .color-picker {
-      height: 3em;
-      width: 5em; }
 
   .second-half {
     display: block;
