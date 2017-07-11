@@ -37,8 +37,12 @@ footer a {
     background-color: #002b36;
     width: 100%;
     font-size: 0;
-    padding: 10px;
+    padding: 5px;
     box-sizing: border-box;
+
+    a {
+      font-size: 10px;
+    }
   }
 
   .footer-navigation {
@@ -51,7 +55,7 @@ footer a {
   .attribution {
     display: block;
     width: 100%;
-    font-size: 16px;
+    font-size: 10px;
     text-align: left;
     color: #fdf6e3;
     padding: 0;

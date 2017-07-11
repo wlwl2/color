@@ -18,7 +18,11 @@ body {
 .second-half {
   display: flex;
   flex: 1 0 50%;
-  flex-flow: column wrap; }
+  flex-flow: column wrap;
+  border: solid thin black;
+  box-sizing: border-box;
+  border-left: 0;
+  border-bottom: 0; }
   .second-half p {
     margin: 1em; }
 
@@ -43,17 +47,18 @@ input.input-color {
 
   .first-half {
     display: block;
-    flex-flow: column wrap;
-    flex: 1 0 50%;
+    flex-flow: row nowrap;
+    flex: 0 1 auto;
     border: solid thin black;
     box-sizing: border-box;
     border-bottom: 0;
     width: 100%; }
 
   .second-half {
-    display: flex;
-    flex: 1 0 50%;
-    flex-flow: column wrap; }
+    display: block;
+    flex: 0 1 auto;
+    flex-flow: row nowrap;
+    width: 100%; }
 
   .second-half .top {
     display: flex;
@@ -206,8 +211,10 @@ footer a {
     background-color: #002b36;
     width: 100%;
     font-size: 0;
-    padding: 10px;
+    padding: 5px;
     box-sizing: border-box; }
+    footer a {
+      font-size: 10px; }
 
   .footer-navigation {
     display: block;
@@ -218,7 +225,7 @@ footer a {
   .attribution {
     display: block;
     width: 100%;
-    font-size: 16px;
+    font-size: 10px;
     text-align: left;
     color: #fdf6e3;
     padding: 0; }

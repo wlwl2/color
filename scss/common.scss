@@ -16,6 +16,10 @@ body {
   display: flex;
   flex: 1 0 50%;
   flex-flow: column wrap;
+  border: solid thin black;
+  box-sizing: border-box;
+  border-left: 0;
+  border-bottom: 0;
 
   p {
     margin: 1em;
@@ -48,8 +52,8 @@ input.input-color {
 
   .first-half {
     display: block;
-    flex-flow: column wrap;
-    flex: 1 0 50%;
+    flex-flow: row nowrap;
+    flex: 0 1 auto;
     border: solid thin black;
     box-sizing: border-box;
     border-bottom: 0;
@@ -57,9 +61,10 @@ input.input-color {
   }
 
   .second-half {
-    display: flex;
-    flex: 1 0 50%;
-    flex-flow: column wrap;
+    display: block;
+    flex: 0 1 auto;
+    flex-flow: row nowrap;
+    width: 100%;
   }
 
   .second-half .top {
