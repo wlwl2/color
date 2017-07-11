@@ -26,20 +26,6 @@ body {
   .second-half p {
     margin: 1em; }
 
-.second-half .top {
-  display: flex;
-  width: 100%;
-  height: 50%; }
-
-.second-half .bottom {
-  display: flex;
-  width: 100%;
-  height: 50%; }
-
-input.input-color {
-  font-size: 2em;
-  display: flex; }
-
 @media screen and (max-width: 1023px) {
   body {
     font-family: sans-serif;
@@ -58,33 +44,11 @@ input.input-color {
     display: block;
     flex: 0 1 auto;
     flex-flow: row nowrap;
-    width: 100%; }
-
-  .second-half .top {
-    display: flex;
-    width: 100%;
-    height: 50%; }
-
-  .second-half .bottom {
-    display: flex;
-    width: 100%;
-    height: 50%; }
-
-  input.input-color {
-    font-size: 2em;
-    display: flex; } }
+    width: 100%; } }
 .color-picker {
   display: flex;
   height: 3em;
   width: 5em; }
-
-.hex {
-  font-size: 2em;
-  padding: 20px; }
-
-.rgb {
-  font-size: 2em;
-  padding: 20px; }
 
 .color-picker-main-container {
   margin-bottom: 80px; }
@@ -98,14 +62,21 @@ input.input-color {
 
 .color-picker-container {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  padding: 20px 20px 0 20px; }
   .color-picker-container input {
     border-radius: 3px; }
+  .color-picker-container .input-color {
+    font-size: 2em;
+    display: flex; }
 
-.color-picker-container {
-  display: flex;
-  flex-wrap: row wrap;
-  padding: 20px 20px 0 20px; }
+.hex {
+  font-size: 2em;
+  padding: 20px; }
+
+.rgb {
+  font-size: 2em;
+  padding: 20px; }
 
 @media screen and (max-width: 1023px) {
   .color-picker-component.hidden {
@@ -116,22 +87,12 @@ input.input-color {
     flex-flow: row wrap; }
 
   .color-picker-container {
-    display: flex;
-    flex-flow: row wrap; }
-
-  .color-picker-container {
     display: block;
-    flex-wrap: row wrap;
+    flex-wrap: row nowrap;
     margin: 0;
     padding: 20px; }
-
-  .color-picker-container input {
-    border-radius: 3px; }
-
-  .color-picker {
-    display: flex;
-    height: 3em;
-    width: 5em; }
+    .color-picker-container .input-color {
+      display: block; }
 
   .hex {
     font-size: 2em;
@@ -140,6 +101,11 @@ input.input-color {
   .rgb {
     font-size: 2em;
     padding: 20px; }
+
+  .color-picker {
+    display: flex;
+    height: 3em;
+    width: 5em; }
 
   .color-picker-main-container {
     margin-bottom: 80px; } }
