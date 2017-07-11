@@ -72,8 +72,7 @@ input.input-color {
 
   input.input-color {
     font-size: 2em;
-    display: block;
-    width: 100%; } }
+    display: flex; } }
 .color-picker {
   display: flex;
   height: 3em;
