@@ -42,7 +42,7 @@ body {
       border-radius: 3px;
       padding: 1px 4px; }
     .first-half .color-picker-container .input-color {
-      display: inline-block;
+      display: block;
       font-size: 22px;
       font-family: sans-serif;
       border: 0;
