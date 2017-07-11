@@ -74,7 +74,8 @@ body {
       .first-half .color-picker-container .input-color-container {
         margin: 0 0 10px 0; }
       .first-half .color-picker-container .input-color {
-        display: block; }
+        display: block;
+        width: auto; }
 
   .second-half {
     display: block;
