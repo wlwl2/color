@@ -16,6 +16,10 @@ body {
   display: flex;
   flex: 1 0 50%;
   flex-flow: column wrap;
+
+  p {
+    margin: 1em;
+  }
 }
 
 .second-half .top {
