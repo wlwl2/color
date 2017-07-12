@@ -151,12 +151,12 @@ var chineseColorList = [
 ];
 
 (function solarizedPalette () {
-  var colorPalette = document.querySelectorAll('.color-palette__buttons')
-  var inputColor = document.querySelectorAll('.input-color')
-  var colorPicker = document.querySelectorAll('.color-picker')
-  var hexOutput = document.querySelectorAll('.hex-output')
-  var rgbOutput = document.querySelectorAll('.rgb-output')
-  var previewHalf = document.querySelectorAll('.second-half')
+  var colorPalette = document.getElementsByClassName('color-palette__buttons')
+  var inputColor = document.getElementsByClassName('input-color')
+  var colorPicker = document.getElementsByClassName('color-picker')
+  var hexOutput = document.getElementsByClassName('hex-output')
+  var rgbOutput = document.getElementsByClassName('rgb-output')
+  var previewHalf = document.getElementsByClassName('second-half')
 
   // For each palette.
   for (var i = 0; i < colorPalette.length; i++) {

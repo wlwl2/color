@@ -1,28 +1,24 @@
 // Hex input will be the source of all truth for the color displayed.
 
-(function colorPickerFunction() {
-  var inputColor = document.querySelectorAll(".input-color");
-  var colorPicker = document.querySelectorAll(".color-picker");
-  var hexOutput = document.querySelectorAll(".hex-output");
-  var rgbOutput = document.querySelectorAll(".rgb-output");
-  var previewHalf = document.querySelectorAll('.second-half');
-
-  //RGB to hex conversion and add any required zero padding
-  function rgbToHex(r, g, b) {
-    function componentToHex(c) {
-      var hex = c.toString(16);
-      return hex.length == 1 ? "0" + hex : hex;
+(function colorPickerFunction () {
+  var inputColor = document.getElementsByClassName('input-color')
+  var colorPicker = document.getElementsByClassName('color-picker')
+  var hexOutput = document.getElementsByClassName('hex-output')
+  var rgbOutput = document.getElementsByClassName('rgb-output')
+  var previewHalf = document.getElementsByClassName('second-half')
+  // RGB to hex conversion and add any required zero padding.
+  function rgbToHex (r, g, b) {
+    function componentToHex (c) {
+      var hex = c.toString(16)
+      return hex.length === 1 ? '0' + hex : hex
     }
-    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
-  };
-
-  /*function rgbToHex(r, g, b) {
+    return '#' + componentToHex(r) + componentToHex(g) + componentToHex(b)
+  }
+  /* function rgbToHex(r, g, b) {
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-  }*/
-
+  } */
   // Here's a version of hexToRgb() that also parses a shorthand hex triplet such as "#03F"
-  function hexToRgb(hex) {
-
+  function hexToRgb (hex) {
     // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
     var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
     hex = hex.replace(shorthandRegex, function(m, r, g, b) {
