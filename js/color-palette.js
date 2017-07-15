@@ -97,57 +97,6 @@ var colorList = [
     'colorName': 'green',
     'backgroundColor': '#859900'
   }
-]
-
-var chineseColorList = [
-  {
-    'colorName': 'White',
-    'backgroundColor': '#ffffff'
-  },
-  {
-    'colorName': 'Gamboge',
-    'backgroundColor': '#ffb61f'
-  },
-  {
-    'colorName': 'Vermilion',
-    'backgroundColor': '#f36838'
-  },
-  {
-    'colorName': 'Cinnabar',
-    'backgroundColor': '#f05654'
-  },
-  {
-    'colorName': 'Rouge',
-    'backgroundColor': '#660000'
-  },
-  {
-    'colorName': 'Carmine',
-    'backgroundColor': '#cb3a56'
-  },
-  {
-    'colorName': 'Scarlet',
-    'backgroundColor': '#ff2121'
-  },
-  {
-    'colorName': 'Umber',
-    'backgroundColor': '#9c5333'
-  },
-  {
-    'colorName': 'LightGreen',
-    'backgroundColor': '#7bcfa6'
-  },
-  {
-    'colorName': 'LightBlue',
-    'backgroundColor': '#1685a9'
-  },
-  {
-    'colorName': 'PhthalocyanineBlue',
-    'backgroundColor': '#000f89'
-  },
-  {
-    'colorName': 'Indigo',
-    'backgroundColor': '#003472'
-  }
 ];
 
 (function solarizedPalette () {
@@ -179,20 +128,20 @@ var chineseColorList = [
     }
   }
 })();
-(function chinesePalette () {
-  var colorPalette = document.querySelectorAll('.chinese .color-palette__buttons')
-  var inputColor = document.querySelectorAll('.chinese .input-color')
-  var colorPicker = document.querySelectorAll('.chinese .color-picker')
-  var hexOutput = document.querySelectorAll('.chinese .hex-output')
-  var rgbOutput = document.querySelectorAll('.chinese .rgb-output')
-  var previewHalf = document.querySelectorAll('.chinese .second-half')
+(function newPalette () {
+  var colorPalette = document.querySelectorAll('.new .color-palette__buttons')
+  var inputColor = document.querySelectorAll('.new .input-color')
+  var colorPicker = document.querySelectorAll('.new .color-picker')
+  var hexOutput = document.querySelectorAll('.new .hex-output')
+  var rgbOutput = document.querySelectorAll('.new .rgb-output')
+  var previewHalf = document.querySelectorAll('.new .second-half')
 
   // For each palette.
   for (var i = 0; i < colorPalette.length; i++) {
     // For each of the buttons in each palette.
     for (var j = 0; j < colorPalette[i].children.length; j++) {
-      colorPalette[i].children[j].style.backgroundColor = chineseColorList[j].backgroundColor
-      colorPalette[i].children[j].setAttribute('title', chineseColorList[j].colorName);
+      // colorPalette[i].children[j].style.backgroundColor = newColorList[j].backgroundColor
+      // colorPalette[i].children[j].setAttribute('title', newColorList[j].colorName);
       (function (i, j) {
         colorPalette[i].children[j].addEventListener('click', function () {
           var paletteButtonColor = rgbFullToHex(colorPalette[i].children[j].style.backgroundColor)
