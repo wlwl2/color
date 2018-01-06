@@ -99,6 +99,73 @@ var colorList = [
   }
 ];
 
+var newColorList = [
+  {
+    'colorName': 'blue',
+    'backgroundColor': '#2B3B55'
+  },
+  {
+    'colorName': 'blue',
+    'backgroundColor': '#243040'
+  },
+  {
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
+  },
+  {
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
+  },
+  {
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
+  },
+  {
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
+  },
+  {
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
+  },
+  {
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
+  },
+  {
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
+  },
+  {
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
+  },
+  {
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
+  },
+  {
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
+  },
+  {
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
+  },
+  {
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
+  },
+  {
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
+  },
+  {
+    'colorName': 'indigo dye',
+    'backgroundColor': '#00416a'
+  }
+];
+
 (function solarizedPalette () {
   var colorPalette = document.getElementsByClassName('color-palette__buttons')
   var inputColor = document.getElementsByClassName('input-color')
@@ -140,8 +207,8 @@ var colorList = [
   for (var i = 0; i < colorPalette.length; i++) {
     // For each of the buttons in each palette.
     for (var j = 0; j < colorPalette[i].children.length; j++) {
-      // colorPalette[i].children[j].style.backgroundColor = newColorList[j].backgroundColor
-      // colorPalette[i].children[j].setAttribute('title', newColorList[j].colorName);
+      colorPalette[i].children[j].style.backgroundColor = newColorList[j].backgroundColor
+      colorPalette[i].children[j].setAttribute('title', newColorList[j].colorName);
       (function (i, j) {
         colorPalette[i].children[j].addEventListener('click', function () {
           var paletteButtonColor = rgbFullToHex(colorPalette[i].children[j].style.backgroundColor)
