@@ -102,7 +102,19 @@ var colorList = [
 var newColorList = [
   {
     'colorName': 'blue',
+    'backgroundColor': '#2b3b55'
+  },
+  {
+    'colorName': 'navy',
+    'backgroundColor': '#1f427e'
+  },
+  {
+    'colorName': 'blue',
     'backgroundColor': '#2B3B55'
+  },
+  {
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
   },
   {
     'colorName': 'blue',
@@ -110,7 +122,7 @@ var newColorList = [
   },
   {
     'colorName': 'blue',
-    'backgroundColor': '#1E2A3A'
+    'backgroundColor': '#364364'
   },
   {
     'colorName': 'blue',
@@ -118,7 +130,7 @@ var newColorList = [
   },
   {
     'colorName': 'blue',
-    'backgroundColor': '#1E2A3A'
+    'backgroundColor': '#2b3b55'
   },
   {
     'colorName': 'blue',
@@ -126,39 +138,27 @@ var newColorList = [
   },
   {
     'colorName': 'blue',
-    'backgroundColor': '#1E2A3A'
+    'backgroundColor': '#273751'
   },
   {
     'colorName': 'blue',
     'backgroundColor': '#1E2A3A'
   },
   {
-    'colorName': 'blue',
-    'backgroundColor': '#1E2A3A'
+    'colorName': 'navy0',
+    'backgroundColor': '#1f427e'
   },
   {
-    'colorName': 'blue',
-    'backgroundColor': '#1E2A3A'
+    'colorName': 'navy1',
+    'backgroundColor': '#395690'
   },
   {
-    'colorName': 'blue',
-    'backgroundColor': '#1E2A3A'
+    'colorName': 'navy2',
+    'backgroundColor': '#314582'
   },
   {
-    'colorName': 'blue',
-    'backgroundColor': '#1E2A3A'
-  },
-  {
-    'colorName': 'blue',
-    'backgroundColor': '#1E2A3A'
-  },
-  {
-    'colorName': 'blue',
-    'backgroundColor': '#1E2A3A'
-  },
-  {
-    'colorName': 'blue',
-    'backgroundColor': '#1E2A3A'
+    'colorName': 'navy3',
+    'backgroundColor': '#2C4D82'
   },
   {
     'colorName': 'indigo dye',
