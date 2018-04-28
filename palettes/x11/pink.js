@@ -1,0 +1,7 @@
+Pink colors
+Pink	FF C0 CB	255 192 203
+LightPink	FF B6 C1	255 182 193
+HotPink	FF 69 B4	255 105 180
+DeepPink	FF 14 93	255  20 147
+PaleVioletRed	DB 70 93	219 112 147
+MediumVioletRed	C7 15 85	199  21 133
