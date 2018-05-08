@@ -12,7 +12,7 @@ body {
   width: 100%; }
 
 .color-picker-main-container {
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   width: 100%;
   font-size: 22px;
   font-family: sans-serif; }
@@ -61,7 +61,7 @@ body {
 
 @media screen and (max-width: 1023px) {
   .color-picker-main-container {
-    margin-bottom: 80px; }
+    margin-bottom: 120px; }
     .color-picker-main-container .color-picker-component {
       display: block;
       width: auto; }
