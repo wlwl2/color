@@ -152,17 +152,3 @@
     })(i);
   }
 })();
-
-function stopBouncing (event) {
-  event.preventDefault()
-}
-
-window.addEventListener('touchstart', stopBouncing, false)
-document.addEventListener('touchstart', stopBouncing, false)
-document.body.addEventListener('touchstart', stopBouncing, false)
-
-function stopSpreading (event) {
-  event.stopPropagation()
-}
-
-document.querySelector('.body-container').addEventListener('touchstart', stopSpreading, false)
