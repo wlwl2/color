@@ -153,6 +153,10 @@
   }
 })();
 
+function preventBouncing (event) {
+  event.preventDefault()
+}
+
 window.addEventListener("touchstart", preventBouncing, {passive: false} );
 document.addEventListener("touchstart", preventBouncing, {passive: false} );
 body.addEventListener("touchstart", preventBouncing, {passive: false} );
