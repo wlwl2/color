@@ -152,3 +152,4 @@
     })(i);
   }
 })();
+ window.addEventListener("touchstart", preventBouncing, {passive: false} );
