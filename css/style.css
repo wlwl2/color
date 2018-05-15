@@ -13,22 +13,22 @@ body {
   width: 100%;
   margin: 0;
   font-family: sans-serif;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 .body-container {
-  position: relative;
-  height: 100%;
-  overflow: auto; }
+  overflow: auto;
+  height: 100%; }
 
 .color-picker-main-container {
   width: 100%;
   font-size: 22px;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  margin-bottom: 120px; }
 
 .color-picker-component {
   display: table;
-  width: 100%;
-  margin-bottom: 120px; }
+  width: 100%; }
   .color-picker-component.hidden {
     display: none; }
 
