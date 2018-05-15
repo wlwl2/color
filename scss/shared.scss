@@ -12,14 +12,10 @@ body {
   overflow: hidden;
 }
 
-.body-container {
-  height: 100%;
-  overflow: auto;
-}
-
 .color-picker-main-container {
-  margin-bottom: 120px;
+  height: 100%;
   width: 100%;
+  overflow: auto;
   font-size: 22px;
   font-family: sans-serif;
 }

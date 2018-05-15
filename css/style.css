@@ -15,19 +15,17 @@ body {
   height: 100%;
   overflow: hidden; }
 
-.body-container {
-  height: 100%;
-  overflow: auto; }
-
 .color-picker-main-container {
-  margin-bottom: 120px;
+  height: 100%;
   width: 100%;
+  overflow: auto;
   font-size: 22px;
   font-family: sans-serif; }
 
 .color-picker-component {
   display: table;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 120px; }
   .color-picker-component.hidden {
     display: none; }
 
