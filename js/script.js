@@ -152,10 +152,3 @@
     })(i);
   }
 })();
-
-function preventBouncing (event) {
-  event.preventDefault()
-}
-
-document.body.addEventListener("touchstart", preventBouncing, {passive: false} );
-document.body.addEventListener("touchmove", preventBouncing, {passive: false} );
