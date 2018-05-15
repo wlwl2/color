@@ -16,14 +16,14 @@ body {
   overflow: auto; }
 
 .body-container {
-  overflow: auto; }
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
 
 .color-picker-main-container {
   margin-bottom: 120px;
   width: 100%;
   font-size: 22px;
-  font-family: sans-serif;
-  overflow: auto; }
+  font-family: sans-serif; }
 
 .color-picker-component {
   display: table;
