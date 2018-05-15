@@ -1,25 +1,25 @@
 html {
   height: 100%;
   width: 100%;
-  overflow: hidden;
   position: fixed;
 }
 
 body {
   height: 100%;
   width: 100%;
+  position: fixed;
   margin: 0;
   font-family: sans-serif;
-  overflow: hidden;
-  position: fixed;
 }
 
 .body-container {
-  height: 100%;
   overflow: auto;
+  height: calc(100% - 100px);
+  margin-bottom: 100px;
 }
 
 .color-picker-main-container {
   width: 100%;
   font-size: 22px;
+  margin-bottom: 20px;
 }

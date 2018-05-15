@@ -6,24 +6,24 @@
 html {
   height: 100%;
   width: 100%;
-  overflow: hidden;
   position: fixed; }
 
 body {
   height: 100%;
   width: 100%;
+  position: fixed;
   margin: 0;
-  font-family: sans-serif;
-  overflow: hidden;
-  position: fixed; }
+  font-family: sans-serif; }
 
 .body-container {
-  height: 100%;
-  overflow: auto; }
+  overflow: auto;
+  height: calc(100% - 100px);
+  margin-bottom: 100px; }
 
 .color-picker-main-container {
   width: 100%;
-  font-size: 22px; }
+  font-size: 22px;
+  margin-bottom: 20px; }
 
 .color-picker-component {
   display: table;
@@ -68,11 +68,9 @@ body {
     padding: 20px; }
 
 @media screen and (max-width: 1023px) {
-  .color-picker-main-container {
-    margin-bottom: 120px; }
-    .color-picker-main-container .color-picker-component {
-      display: block;
-      width: auto; }
+  .color-picker-main-container .color-picker-component {
+    display: block;
+    width: auto; }
 
   .first-half {
     display: block;
@@ -114,7 +112,8 @@ footer {
   height: 100px;
   background-color: #002b36;
   width: 100%;
-  font-size: 0; }
+  font-size: 0;
+  z-index: 2; }
 
 .footer-navigation {
   display: inline-block;
