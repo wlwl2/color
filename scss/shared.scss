@@ -9,10 +9,12 @@ body {
   width: 100%;
   margin: 0;
   font-family: sans-serif;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .body-container {
+  height: 100%;
+  overflow: auto;
 }
 
 .color-picker-main-container {
