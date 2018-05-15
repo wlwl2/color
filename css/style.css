@@ -4,24 +4,20 @@
   /* IE9 Compat Modes */
   src: url("../fonts/LatoLatin-Light.woff2") format("woff2"), url("../fonts/LatoLatin-Light.woff") format("woff"), url("../fonts/LatoLatin-Light.eot") format("truetype"); }
 html {
-  height: 100%;
-  width: 100%;
-  position: fixed; }
+  width: 100%; }
 
 body {
-  height: 100%;
   width: 100%;
-  position: fixed;
   margin: 0;
   font-family: sans-serif; }
 
 .body-container {
-  overflow: auto;
-  height: calc(100% - 110px); }
+  overflow: auto; }
 
 .color-picker-main-container {
   width: 100%;
-  font-size: 22px; }
+  font-size: 22px;
+  margin-bottom: 110px; }
 
 .color-picker-component {
   display: table;

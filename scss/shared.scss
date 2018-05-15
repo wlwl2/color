@@ -1,23 +1,19 @@
 html {
-  height: 100%;
   width: 100%;
-  position: fixed;
 }
 
 body {
-  height: 100%;
   width: 100%;
-  position: fixed;
   margin: 0;
   font-family: sans-serif;
 }
 
 .body-container {
   overflow: auto;
-  height: calc(100% - 110px);
 }
 
 .color-picker-main-container {
   width: 100%;
   font-size: 22px;
+  margin-bottom: 110px;
 }
