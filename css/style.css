@@ -107,7 +107,7 @@ body {
     width: 30px;
     height: 30px; } }
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: 100px;
   background-color: #002b36;
@@ -135,7 +135,7 @@ footer a {
 
 @media screen and (max-width: 1023px) {
   footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background-color: #002b36;
     width: 100%;
