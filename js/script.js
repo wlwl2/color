@@ -157,10 +157,5 @@ function preventBouncing (event) {
   event.preventDefault()
 }
 
-window.addEventListener("touchstart", preventBouncing, {passive: false} );
-document.addEventListener("touchstart", preventBouncing, {passive: false} );
 document.body.addEventListener("touchstart", preventBouncing, {passive: false} );
-
-window.addEventListener("touchmove", preventBouncing, {passive: false} );
-document.addEventListener("touchmove", preventBouncing, {passive: false} );
 document.body.addEventListener("touchmove", preventBouncing, {passive: false} );
