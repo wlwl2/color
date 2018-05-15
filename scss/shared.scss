@@ -7,20 +7,16 @@ html {
 body {
   height: 100%;
   width: 100%;
+  overflow: auto;
   margin: 0;
   font-family: sans-serif;
-  overflow: hidden;
-  position: relative;
 }
 
 .body-container {
-  overflow: auto;
-  height: 100%;
 }
 
 .color-picker-main-container {
   width: 100%;
   font-size: 22px;
-  font-family: sans-serif;
   margin-bottom: 120px;
 }
