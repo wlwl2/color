@@ -157,4 +157,9 @@ function preventBouncing (event) {
   event.preventDefault()
 }
 
-document.addEventListener("touchstart", preventBouncing, {passive: false} );
+function stopProp () {
+  event.stopPropagation()
+}
+
+window.addEventListener('touchstart', preventBouncing, {passive: false})
+document.body.addEventListener('touchstart', stopProp, {passive: false})
