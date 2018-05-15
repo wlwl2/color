@@ -153,7 +153,7 @@
   }
 })();
 
-var content = document.body;
+var content = document.querySelector('.body-container');
 content.addEventListener('touchstart', function(event) {
     this.allowUp = (this.scrollTop > 0);
     this.allowDown = (this.scrollTop < this.scrollHeight - this.clientHeight);
