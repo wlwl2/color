@@ -153,4 +153,8 @@
   }
 })();
 
+function preventBouncing (event) {
+  event.preventDefault()
+}
+
 window.addEventListener("touchstart", preventBouncing, {passive: false} );

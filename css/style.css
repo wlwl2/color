@@ -17,8 +17,7 @@ body {
 
 .color-picker-main-container {
   width: 100%;
-  font-size: 22px;
-  margin-bottom: 120px; }
+  font-size: 22px; }
 
 .color-picker-component {
   display: table;
