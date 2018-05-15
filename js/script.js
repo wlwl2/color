@@ -153,21 +153,16 @@
   }
 })();
 
-var content = document.body;
-content.addEventListener('touchstart', function(event) {
-    this.allowUp = (this.scrollTop > 0);
-    this.allowDown = (this.scrollTop < this.scrollHeight - this.clientHeight);
-    this.slideBeginY = event.pageY;
-});
+function stopBouncing (event) {
+  event.preventDefault()
+}
 
-content.addEventListener('touchmove', function(event) {
-    var up = (event.pageY > this.slideBeginY);
-    var down = (event.pageY < this.slideBeginY);
-    this.slideBeginY = event.pageY;
-    if ((up && this.allowUp) || (down && this.allowDown)) {
-        event.stopPropagation();
-    }
-    else {
-        event.preventDefault();
-    }
-});
+window.addEventListener('touchmove', stopBouncing, false)
+document.addEventListener('touchmove', stopBouncing, false)
+document.body.addEventListener('touchmove', stopBouncing, false)
+
+function stopSpreading (event) {
+  event.stopPropagation()
+}
+
+document.querySelector('.body-container').addEventListener('touchmove', stopSpreading, false)
