@@ -157,12 +157,12 @@ function stopBouncing (event) {
   event.preventDefault()
 }
 
-window.addEventListener('touchmove', stopBouncing, false)
-document.addEventListener('touchmove', stopBouncing, false)
-document.body.addEventListener('touchmove', stopBouncing, false)
+window.addEventListener('touchstart', stopBouncing, false)
+document.addEventListener('touchstart', stopBouncing, false)
+document.body.addEventListener('touchstart', stopBouncing, false)
 
 function stopSpreading (event) {
   event.stopPropagation()
 }
 
-document.querySelector('.body-container').addEventListener('touchmove', stopSpreading, false)
+document.querySelector('.body-container').addEventListener('touchstart', stopSpreading, false)
