@@ -17,6 +17,7 @@
   /* function rgbToHex(r, g, b) {
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
   } */
+  // https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
   // Here's a version of hexToRgb() that also parses a shorthand hex triplet such as "#03F"
   function hexToRgb (hex) {
     // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
