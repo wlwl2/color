@@ -52,7 +52,7 @@ function hexToRgb (hex) {
   var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i
   hex = hex.replace(shorthandRegex, 
     function (m, r, g, b) {
-      return r + r + g + g + b + b  
+      return r + r + g + g + b + b
     }
   )
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
@@ -69,10 +69,12 @@ function hexToRgb (hex) {
  * Assumes r, g, and b are contained in the set [0, 255] and
  * returns h, s, and v in the set [0, 1].
  * The return value for this function is inherently complex, be careful.
+ * Put what is returned from this function into hsvToFullHsv() 
+ * to get a HSV in the format: hsv(239, 78%, 43%).
  * (https://gist.github.com/mjackson/5311256)
- * @param {number} r - The red color value.
- * @param {number} g - The green color value.
- * @param {number} b - The blue color value.
+ * @param {number} r - Red ∈ [0, 255].
+ * @param {number} g - Green ∈ [0, 255].
+ * @param {number} b - Blue ∈ [0, 255].
  * @returns {(number|Array)} - The HSV each ∈ [0, 1].
  */
 function rgbToHsv (r, g, b) {
@@ -109,9 +111,9 @@ function rgbToHsv (r, g, b) {
  * (https://gist.github.com/mjackson/5311256 
  * [@stephencweiss] Stephen Weiss's answer)
  * Use example: hsvToRgb(239, .78, .43) correctly returns [24, 26, 110]
- * @param {number} r - Red ∈ [0, 360].
- * @param {number} g - Green ∈ [0, 1].
- * @param {number} b - Blue ∈ [0, 1].
+ * @param {number} h - Hue ∈ [0, 360].
+ * @param {number} s - Saturation ∈ [0, 1].
+ * @param {number} v - Value ∈ [0, 1].
  * @returns {(number|Array)} - RGB each ∈ [0, 255].
  */
 function hsvToRgb (h, s, v) {
@@ -131,6 +133,40 @@ function hsvToRgb (h, s, v) {
   g = Math.round( (g + m) * 255);
   b = Math.round( (b + m) * 255);
   return [r, g, b]
+}
+
+/**
+ * Converts hsv array from rgbToHsv() to a HSV. 
+ * E.g. [ 0.6627906976744186, 0.7818181818181819, 0.43137254901960786 ]
+ * to hsv(239, 78%, 43%). Take care of what this returns.
+ * @param {(number|Array)} hsv - hsv array from rgbToHsv().
+ * @returns {Object} - Object containing a regular hsv string and the original
+ * hsv array passed into this function.
+ */
+function hsvToFullHsv (hsv) {
+  const h = hsv[0]
+  const s = hsv[1]
+  const v = hsv[2]
+  
+  const hue = Math.round(h * 360)
+  let saturation = 0
+  let value = 0
+  if (s > 0 && s < 1) {
+    saturation = s.toFixed(2)
+  }
+  if (v > 0 && v < 1) {
+    value = v.toFixed(2)
+  }
+  
+  const finalSaturation = saturation * 100
+  const finalValue = value * 100
+  
+  let result = {
+    fullHsv: `hsv(${hue}, ${finalSaturation}%, ${finalValue}%)`,
+    originalHsv: hsv
+  }
+  
+  return result
 }
 
 // /**
