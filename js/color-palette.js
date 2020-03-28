@@ -161,6 +161,7 @@ var newColorList = [
     }
   }
 })();
+
 (function newPalette () {
   var colorPalette = document.querySelectorAll('.new .color-palette__buttons')
   var inputColor = document.querySelectorAll('.new .input-color')
