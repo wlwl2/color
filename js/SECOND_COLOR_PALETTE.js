@@ -1,39 +1,39 @@
 var SECOND_COLOR_PALETTE = [
   {
-    'colorName': 'LightSalmon',
-    'backgroundColor': 'rgb(255, 160, 122)'
+    'colorName': 'blue',
+    'backgroundColor': '#2b3b55'
   },
   {
-    'colorName': 'Salmon',
-    'backgroundColor': '#rgb(250, 128, 114)'
+    'colorName': 'navy',
+    'backgroundColor': '#1f427e'
   },
   {
-    'colorName': 'DarkSalmon',
-    'backgroundColor': 'rgb(233, 150, 122)'
+    'colorName': 'blue',
+    'backgroundColor': '#2B3B55'
   },
   {
-    'colorName': 'LightCoral',
-    'backgroundColor': 'rgb(240, 128, 128)'
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
   },
   {
-    'colorName': 'IndianRed',
-    'backgroundColor': 'rgb(205, 92, 92)'
+    'colorName': 'blue',
+    'backgroundColor': '#243040'
   },
   {
-    'colorName': 'Crimson',
-    'backgroundColor': 'rgb(220, 20, 60)'
+    'colorName': 'blue',
+    'backgroundColor': '#364364'
   },
   {
-    'colorName': 'FireBrick',
-    'backgroundColor': 'rgb(178, 34, 34)'
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
   },
   {
-    'colorName': 'DarkRed',
-    'backgroundColor': 'rgb(139, 0, 0)'
+    'colorName': 'blue',
+    'backgroundColor': '#2b3b55'
   },
   {
-    'colorName': 'Red',
-    'backgroundColor': 'rgb(255, 0, 0)'
+    'colorName': 'blue',
+    'backgroundColor': '#1E2A3A'
   },
   {
     'colorName': 'blue',
