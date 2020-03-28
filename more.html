@@ -27,7 +27,7 @@
     <div class="body-container">
       <div class="more__page">
         <section class="more__links-container">
-          <h2>Useful/good palettes/design systems:</h2>
+          <h2>Useful palettes/design systems:</h2>
           <ul>
             <li>
               <a href="https://material.io/guidelines/style/color.html#color-color-palette">
@@ -41,6 +41,42 @@
             </li>
           </ul>
         </section>
+        
+        <section class="more__shades">
+          <h2>Get Shades:</h2>
+          
+          <fieldset>
+            <label>Base Color</label>
+            <input class="more__color-picker" type="color"/>
+          </fieldset>
+          
+          <fieldset>
+            <label>Start Percentage</label>
+            <input type="number" class="more__start-percentage" min="0" max="100">
+          </fieldset>
+          
+          <fieldset>
+            <label>End Percentage</label>
+            <input type="number" class="more__end-percentage" min="0" max="100">
+          </fieldset>
+          
+          <fieldset>
+            <label>Percentage Gap</label>
+            <input type="number" class="more__percentage-gap" min="0" max="100">
+          </fieldset>
+          
+          <section class="more__selected-hex">
+            #ffffff
+          </section>
+          
+          <section class="more__shades-demo">
+            <ul class="more__shades-demo-list"></ul>
+          </section>
+          
+          <section class="more__shades-output"></section>
+          
+        </section>
+        
       </div>
     </div>
     <footer>

@@ -212,5 +212,9 @@ footer a:active {
 .more__page a:active {
   text-decoration: underline;
 }
+.more__page fieldset {
+  display: inline-block;
+  vertical-align: middle;
+}
 
 /*# sourceMappingURL=style.css.map */
