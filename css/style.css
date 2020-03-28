@@ -193,5 +193,24 @@ footer a:active {
     padding: 0;
   }
 }
+.more__page {
+  padding: 20px;
+}
+.more__page h2 {
+  font-family: monospace;
+}
+.more__page a {
+  font-family: monospace;
+  font-size: 16px;
+}
+.more__page a:link,
+.more__page a:visited {
+  text-decoration: none;
+}
+.more__page a:hover,
+.more__page a:focus,
+.more__page a:active {
+  text-decoration: underline;
+}
 
 /*# sourceMappingURL=style.css.map */

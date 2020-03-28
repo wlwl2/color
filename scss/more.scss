@@ -1,0 +1,23 @@
+.more__page {
+  padding: 20px;
+  
+  h2 {
+    font-family: monospace;
+  }
+  
+  a {
+    font-family: monospace;
+    font-size: 16px;
+  }
+  
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: underline;
+  }
+}
