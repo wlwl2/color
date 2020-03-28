@@ -6,6 +6,22 @@ footer {
   width: 100%;
   font-size: 0;
   z-index: 2;
+  font-family: monospace;
+  
+  a {
+    color: #fdf6e3;
+  }
+  
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: underline;
+  }
 }
 
 .footer-navigation {
@@ -26,28 +42,20 @@ footer {
   color: #fdf6e3;
 }
 
-footer a {
-  color: #fdf6e3;
-}
-
 @media screen and (max-width: 1023px) {
   footer {
-    position: fixed;
-    bottom: 0;
     background-color: #002b36;
-    width: 100%;
     font-size: 0;
     padding: 5px;
     box-sizing: border-box;
 
     a {
-      font-size: 10px;
+      font-size: 12px;
     }
   }
 
   .footer-navigation {
     display: block;
-    font-size: 16px;
     width: 100%;
     padding: 0;
   }
@@ -55,13 +63,8 @@ footer a {
   .attribution {
     display: block;
     width: 100%;
-    font-size: 10px;
+    font-size: 12px;
     text-align: left;
-    color: #fdf6e3;
     padding: 0;
-  }
-
-  footer a {
-    color: #fdf6e3;
   }
 }
