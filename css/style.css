@@ -130,7 +130,6 @@ body {
 footer {
   position: fixed;
   bottom: 0;
-  height: 100px;
   background-color: #002b36;
   width: 100%;
   font-size: 0;
@@ -152,6 +151,7 @@ footer a:active {
 
 .footer-navigation {
   display: inline-block;
+  vertical-align: top;
   font-size: 16px;
   width: 50%;
   box-sizing: border-box;
@@ -160,6 +160,7 @@ footer a:active {
 
 .attribution {
   display: inline-block;
+  vertical-align: top;
   width: 50%;
   font-size: 16px;
   box-sizing: border-box;
