@@ -59,4 +59,6 @@ function hsvToFullHsv (hsv) {
 }
 
 // hsv(239, 78%, 43%) = rgb(24, 26, 110)
+// hsv(123, 76%, 71%) = rgb(43, 182, 50)
 console.log(hsvToFullHsv(rgbToHsv(24, 26, 110)))
+console.log(hsvToFullHsv(rgbToHsv(43, 182, 50)))
