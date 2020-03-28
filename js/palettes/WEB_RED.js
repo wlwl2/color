@@ -1,4 +1,4 @@
-var SECOND_COLOR_PALETTE = [
+var WEB_RED_PALETTE = [
   {
     'colorName': 'LightSalmon',
     'backgroundColor': '#ffa07a'
