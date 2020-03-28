@@ -1,39 +1,39 @@
 var SECOND_COLOR_PALETTE = [
   {
     'colorName': 'LightSalmon',
-    'backgroundColor': 'rgb(255, 160, 122)'
+    'backgroundColor': '#ffa07a'
   },
   {
     'colorName': 'Salmon',
-    'backgroundColor': '#rgb(250, 128, 114)'
+    'backgroundColor': '#fa8072'
   },
   {
     'colorName': 'DarkSalmon',
-    'backgroundColor': 'rgb(233, 150, 122)'
+    'backgroundColor': '#e9967a'
   },
   {
     'colorName': 'LightCoral',
-    'backgroundColor': 'rgb(240, 128, 128)'
+    'backgroundColor': '#f08080'
   },
   {
     'colorName': 'IndianRed',
-    'backgroundColor': 'rgb(205, 92, 92)'
+    'backgroundColor': '#cd5c5c'
   },
   {
     'colorName': 'Crimson',
-    'backgroundColor': 'rgb(220, 20, 60)'
+    'backgroundColor': '#dd143c'
   },
   {
     'colorName': 'FireBrick',
-    'backgroundColor': 'rgb(178, 34, 34)'
+    'backgroundColor': '#b32222'
   },
   {
     'colorName': 'DarkRed',
-    'backgroundColor': 'rgb(139, 0, 0)'
+    'backgroundColor': '#8b0000'
   },
   {
     'colorName': 'Red',
-    'backgroundColor': 'rgb(255, 0, 0)'
+    'backgroundColor': '#ff0000'
   },
   {
     'colorName': 'blue',
