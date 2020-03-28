@@ -68,6 +68,7 @@ function hexToRgb (hex) {
  * adapted from http://en.wikipedia.org/wiki/HSV_color_space.
  * Assumes r, g, and b are contained in the set [0, 255] and
  * returns h, s, and v in the set [0, 1].
+ * The return value for this function is inherently complex, be careful.
  * (https://gist.github.com/mjackson/5311256)
  * @param {number} r - The red color value.
  * @param {number} g - The green color value.

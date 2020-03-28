@@ -1,29 +1,5 @@
 // Just used for testing these "interesting" functions.
 // hsv(239, 78%, 43%) = rgb(24, 26, 110)
-
-function hsvToRgb (h, s, v) {
-  hprime = h / 60;
-  const c = v * s;
-  const x = c * (1 - Math.abs(hprime % 2 - 1)); 
-  const m = v - c;
-  let r, g, b;
-  if (!hprime) {r = 0; g = 0; b = 0; }
-  if (hprime >= 0 && hprime < 1) { r = c; g = x; b = 0}
-  if (hprime >= 1 && hprime < 2) { r = x; g = c; b = 0}
-  if (hprime >= 2 && hprime < 3) { r = 0; g = c; b = x}
-  if (hprime >= 3 && hprime < 4) { r = 0; g = x; b = c}
-  if (hprime >= 4 && hprime < 5) { r = x; g = 0; b = c}
-  if (hprime >= 5 && hprime < 6) { r = c; g = 0; b = x}
-  
-  r = Math.round( (r + m)* 255);
-  g = Math.round( (g + m)* 255);
-  b = Math.round( (b + m)* 255);
-
-  return [r, g, b]
-}
-
-console.log(hsvToRgb(239, .78, .43))
-
 function rgbToHsv (r, g, b) {
   r /= 255, g /= 255, b /= 255;
 
@@ -44,8 +20,57 @@ function rgbToHsv (r, g, b) {
 
     h /= 6;
   }
-
-  return [ h, s, v ];
+  
+  return [ h, s, v ]
 }
 
+/**
+ * Converts hsv array from rgbToHsv() to a HSV. 
+ * E.g. [ 0.6627906976744186, 0.7818181818181819, 0.43137254901960786 ]
+ * to hsv(239, 78%, 43%). Take care of what this returns.
+ * @param {(number|Array)} hsv - The red color value.
+ * @returns {Object} - Object containing a regular hsv string and the original
+ * hsv array passed into this function.
+ */
+function hsvToFullHsv (hsv) {
+  const h = hsv[0]
+  const s = hsv[1]
+  const v = hsv[2]
+  
+  const hue = Math.round(h * 360)
+  let saturation = 0
+  let value = 0
+  if (s > 0 && s < 1) {
+    saturation = s.toFixed(2)
+  }
+  if (v > 0 && v < 1) {
+    value = v.toFixed(2)
+  }
+  
+  const finalSaturation = saturation * 100
+  const finalValue = value * 100
+  
+  let result = {
+    fullHsv: `hsv(${hue}, ${finalSaturation}%, ${finalValue}%)`,
+    originalHsv: hsv
+  }
+  
+  return result
+}
+
+/**
+ * Converts hsv array from rgbToHsv() to a HSV. 
+ * E.g. [ 0.6627906976744186, 0.7818181818181819, 0.43137254901960786 ]
+ * @param {number} r - The red color value.
+ * @param {number} g - The green color value.
+ * @param {number} b - The blue color value.
+ * @returns {(number|Array)} - The HSV each ∈ [0, 1].
+ */
+function fullHsvToHsv (hsv) {
+  
+}
+
+
+// console.log(0.toFixed(2))
+// rgbToHsv(24, 26, 110)
 console.log(rgbToHsv(24, 26, 110))
