@@ -28,7 +28,7 @@ function rgbToHsv (r, g, b) {
  * Converts hsv array from rgbToHsv() to a HSV. 
  * E.g. [ 0.6627906976744186, 0.7818181818181819, 0.43137254901960786 ]
  * to hsv(239, 78%, 43%). Take care of what this returns.
- * @param {(number|Array)} hsv - The red color value.
+ * @param {(number|Array)} hsv - hsv array from rgbToHsv().
  * @returns {Object} - Object containing a regular hsv string and the original
  * hsv array passed into this function.
  */
@@ -58,19 +58,5 @@ function hsvToFullHsv (hsv) {
   return result
 }
 
-/**
- * Converts hsv array from rgbToHsv() to a HSV. 
- * E.g. [ 0.6627906976744186, 0.7818181818181819, 0.43137254901960786 ]
- * @param {number} r - The red color value.
- * @param {number} g - The green color value.
- * @param {number} b - The blue color value.
- * @returns {(number|Array)} - The HSV each ∈ [0, 1].
- */
-function fullHsvToHsv (hsv) {
-  
-}
-
-
-// console.log(0.toFixed(2))
-// rgbToHsv(24, 26, 110)
-console.log(rgbToHsv(24, 26, 110))
+// hsv(239, 78%, 43%) = rgb(24, 26, 110)
+console.log(hsvToFullHsv(rgbToHsv(24, 26, 110)))
