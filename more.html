@@ -45,10 +45,14 @@
         <section class="more__shades">
           <h2>Get Shades:</h2>
           
-          <fieldset>
-            <label>Base Color</label>
-            <input class="more__color-picker" type="color"/>
-          </fieldset>
+          <section class="more__selected-hex">
+            <fieldset>
+              <label>Base Color</label>
+              <input class="more__color-picker" type="color"/>
+            </fieldset>
+            Selected Base Color: 
+            <span class="more__selected-hex-value">#000000</span>
+          </section>
           
           <fieldset>
             <label>Start Percentage</label>
@@ -64,10 +68,6 @@
             <label>Percentage Gap</label>
             <input type="number" class="more__percentage-gap" min="0" max="100">
           </fieldset>
-          
-          <section class="more__selected-hex">
-            #ffffff
-          </section>
           
           <section class="more__shades-demo">
             <ul class="more__shades-demo-list"></ul>
