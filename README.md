@@ -18,9 +18,10 @@ Source: https://en.wikipedia.org/wiki/Web_colors
 
 License: https://creativecommons.org/licenses/by-sa/3.0/
 
-## To Do
+## Possibilities
 
-- Add a canvas color picker.
+- Add a custom canvas color picker. Currently native browser color 
+pickers are used.
 
 ## Development
 
