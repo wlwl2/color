@@ -12,7 +12,6 @@
   "devDependencies": {
     "grunt": "^1.1.0",
     "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "jsdoc-to-markdown": "^5.0.3"
+    "grunt-contrib-watch": "^1.1.0"
   }
 }
