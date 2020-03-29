@@ -7,6 +7,8 @@ moreColorPicker.addEventListener("change", function () {
   
 })
 
+console.log(rgbToHex(211, 54, 130))
+
 // if (confirmed >= 0 && confirmed < 10) {
 //     return 'hsv(0, 25%, 100%)'
 //   } else if (confirmed > 9 && confirmed < 50) {

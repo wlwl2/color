@@ -4,11 +4,13 @@
  * Does RGB to hex conversion and adds any required zero padding.
  * Note: Expects integer values for r, g and b, so you'll need to do 
  * your own rounding if you have non-integer values.
+ * Converts rgbToHex(211, 54, 130) to '#d33682'.
  * (https://stackoverflow.com/questions/
  * 5623838/rgb-to-hex-and-hex-to-rgb|Source)
  * @param {number} r - Red.
  * @param {number} g - Green.
  * @param {number} b - Blue.
+ * @returns {string} - hex e.g. #d33682.
  */
 function rgbToHex (r, g, b) {
   function componentToHex (c) {
@@ -22,23 +24,23 @@ function rgbToHex (r, g, b) {
 }
 
 /**
- * Converts rgb(211, 54, 130) to #d33682.
+ * Converts 'rgb(211, 54, 130)' to '#d33682'.
  * (https://stackoverflow.com/questions/
  * 5623838/rgb-to-hex-and-hex-to-rgb|Source)
  * @param {string} rgbFull - For example: rgb(211, 54, 130).
+ * @returns {string} - hex e.g. #d33682.
  */
 function rgbFullToHex (rgbFull) {
   var oldHex = rgbFull
-  console.log(rgbFull)
   // From rgb(211, 54, 130) detects: (211, 54, 130).
   var regExp = /\(([^)]+)\)/
   var rgbList = regExp.exec(oldHex)[1].split(',')
   var red = Number(rgbList[0])
   var green = Number(rgbList[1])
   var blue = Number(rgbList[2])
-  var newHex = rgbToHex(red, green, blue)
+  var finalHex = rgbToHex(red, green, blue)
   // returns #d33682
-  return newHex
+  return finalHex
 }
 
 /**
@@ -46,6 +48,8 @@ function rgbFullToHex (rgbFull) {
  * (https://stackoverflow.com/questions/
  * 5623838/rgb-to-hex-and-hex-to-rgb|Source)
  * @param {string} hex - For example: #d33682.
+ * @returns {Object.<string, number>} - Object containing 
+ * RGB key: values each ∈ [0, 255].
  */
 function hexToRgb (hex) {
   // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
