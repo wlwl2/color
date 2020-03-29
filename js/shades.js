@@ -1,13 +1,17 @@
 var moreColorPicker = document.querySelector('.more__color-picker')
 var moreHexValue = document.querySelector('.more__selected-hex-value')
+var moreHsvValue = document.querySelector('.more__selected-hsv-value')
 
 moreColorPicker.addEventListener("change", function () {
-  console.log(moreColorPicker.value)
-  moreHexValue.textContent = moreColorPicker.value
-  
+  const hex = moreColorPicker.value
+  const rgb = hexToRgb(hex)
+  const hsv = rgbToHsv(rgb.r, rgb.g, rgb.b)
+  const fullHsvObj = hsvToFullHsv(hsv)
+  moreHexValue.textContent = hex
+  // #0000ff hsv(240, 100%, 100%) 
+  moreHsvValue.textContent = fullHsvObj.fullHsv
 })
 
-console.log(rgbToHex(211, 54, 130))
 
 // if (confirmed >= 0 && confirmed < 10) {
 //     return 'hsv(0, 25%, 100%)'

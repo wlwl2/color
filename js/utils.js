@@ -160,11 +160,21 @@ function hsvToFullHsv (hsv) {
   const hue = Math.round(h * 360)
   let saturation = 0
   let value = 0
+  
   if (s > 0 && s < 1) {
     saturation = s.toFixed(2)
   }
+  
   if (v > 0 && v < 1) {
     value = v.toFixed(2)
+  }
+  
+  if (s === 1) {
+    saturation = 1
+  }
+  
+  if (v === 1) {
+    value = 1
   }
   
   const finalSaturation = saturation * 100
