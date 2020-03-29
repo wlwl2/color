@@ -120,9 +120,13 @@ Source: https://en.wikipedia.org/wiki/Web_colors
 
 License: https://creativecommons.org/licenses/by-sa/3.0/
 
-### Simple color converter for (almost) Any Color (by @draganradu) 
+### Simple color converter for (almost) Any Color
 
 https://github.com/draganradu/simple-color-convertor-pantone-ral
+
+### Javascript color converter
+
+https://github.com/metaloha/color2color
   
 ## Possibilities
 
