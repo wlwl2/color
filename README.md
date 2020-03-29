@@ -2,6 +2,14 @@
 
 Color picker tools.
 
+## Color Utility Functions
+
+This repository also contains color utility functions that are meant for use in
+front-end projects.
+
+
+
+
 ## Resources
 
 Good examples of palettes/design systems can be found here:

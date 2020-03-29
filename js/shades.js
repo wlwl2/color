@@ -4,6 +4,7 @@ var moreHexValue = document.querySelector('.more__selected-hex-value')
 moreColorPicker.addEventListener("change", function () {
   console.log(moreColorPicker.value)
   moreHexValue.textContent = moreColorPicker.value
+  
 })
 
 // if (confirmed >= 0 && confirmed < 10) {
