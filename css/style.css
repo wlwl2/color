@@ -196,6 +196,7 @@ footer a:active {
 }
 .more__page {
   padding: 20px;
+  margin: 0px 0px 60px 0px;
 }
 .more__page h2 {
   font-family: monospace;
@@ -221,6 +222,9 @@ footer a:active {
   margin: 10px 0;
   padding: 20px;
   border: 1px solid black;
+}
+.more__page ul {
+  list-style-type: none;
 }
 
 /*# sourceMappingURL=style.css.map */

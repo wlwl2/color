@@ -177,8 +177,8 @@ function hsvToFullHsv (hsv) {
     value = 1
   }
   
-  const finalSaturation = saturation * 100
-  const finalValue = value * 100
+  const finalSaturation = Math.round(saturation * 100)
+  const finalValue = Math.round(value * 100)
   
   let result = {
     fullHsv: `hsv(${hue}, ${finalSaturation}%, ${finalValue}%)`,

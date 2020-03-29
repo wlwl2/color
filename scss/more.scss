@@ -1,5 +1,6 @@
 .more__page {
   padding: 20px;
+  margin: 0px 0px 60px 0px;
   
   h2 {
     font-family: monospace;
@@ -53,7 +54,11 @@
   }
 
   .more__shades-demo-list {
-
+    
+  }
+  
+  ul {
+    list-style-type: none;
   }
 
   .more__shades-output {
