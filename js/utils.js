@@ -142,7 +142,12 @@ function hsvToRgb (h, s, v) {
 /**
  * Converts hsv array from rgbToHsv() to a HSV. 
  * E.g. [ 0.6627906976744186, 0.7818181818181819, 0.43137254901960786 ]
- * to hsv(239, 78%, 43%). Take care of what this returns.
+ * to hsv(239, 78%, 43%). 
+ * Returns something like this:
+ * {
+ *   fullHsv: 'hsv(239, 78%, 43%)',
+ *   originalHsv: [ 0.6627..., 0.7818..., 0.4313... ]
+ * }
  * @param {(number|Array)} hsv - hsv array from rgbToHsv().
  * @returns {Object} - Object containing a regular hsv string and the original
  * hsv array passed into this function.
