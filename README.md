@@ -5,7 +5,7 @@ Color picker tools.
 ## Color Utility Functions
 
 This repository also contains color utility functions that are meant for use in
-front-end projects.
+front-end projects. See `./js/utils.js`.
 
 ### rgbToHex(r, g, b)
 
